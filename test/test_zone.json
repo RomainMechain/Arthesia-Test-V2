@@ -1,0 +1,63 @@
+{
+  "id": "floor1_zone_test",
+  "name": "Zone de Test",
+  "floor_id": 1,
+  "theme_tags": ["test", "tutorial"],
+  "level_range": [1, 3],
+  "description": "Une petite zone de test avec un mur et une sortie.",
+  "size": [800, 600],
+  "spawn_points": {
+	"default": [400, 300],
+	"entrance_north": [400, 550],
+	"entrance_south": [400, 50],
+	"entrance_east": [50, 300],
+	"entrance_west": [750, 300]
+  },
+  "elements": [
+	{
+	  "element_type": "wall",
+	  "id": "wall_north",
+	  "position": [0, 0],
+	  "size": [800, 50],
+	  "wall_type": "stone",
+	  "color": "#808080"
+	},
+	{
+	  "element_type": "wall",
+	  "id": "wall_south",
+	  "position": [0, 550],
+	  "size": [800, 50],
+	  "wall_type": "stone",
+	  "color": "#808080"
+	},
+	{
+	  "element_type": "wall",
+	  "id": "wall_west",
+	  "position": [0, 0],
+	  "size": [50, 600],
+	  "wall_type": "stone",
+	  "color": "#808080"
+	},
+	{
+	  "element_type": "wall",
+	  "id": "wall_east",
+	  "position": [750, 0],
+	  "size": [50, 600],
+	  "wall_type": "stone",
+	  "color": "#808080"
+	},
+	{
+	  "element_type": "exit",
+	  "id": "exit_north",
+	  "position": [368, 0],
+	  "size": [64, 50],
+	  "target_zone_id": "floor1_zone_002",
+	  "target_spawn_name": "entrance_south",
+	  "exit_type": "portal",
+	  "color": "#3399ffb3",
+	  "locked": false,
+	  "required_key_id": "",
+	  "min_level": 0
+	}
+  ]
+}
