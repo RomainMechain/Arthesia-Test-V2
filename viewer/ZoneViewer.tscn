@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://jrk7aj05n5rj"]
+
+[ext_resource type="Script" uid="uid://c2fx3gox2jgh3" path="res://viewer/ZoneViewer.gd" id="1_xnpw5"]
+
+[node name="ZoneViewer" type="Node2D"]
+script = ExtResource("1_xnpw5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="DrawArea" type="Node2D" parent="."]
