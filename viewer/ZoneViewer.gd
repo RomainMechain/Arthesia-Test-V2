@@ -87,6 +87,8 @@ func display_zone():
 			draw_wall(element)
 		elif element is ExitElement:
 			draw_exit(element)
+		elif element is POIElement:  # ← NOUVEAU
+			draw_poi(element)
 	
 	# Dessiner les spawn points
 	for spawn_name in zone.spawn_points:
@@ -121,6 +123,7 @@ func draw_exit(exit: ExitElement):
 	label.add_theme_color_override("font_color", Color.WHITE)
 	draw_area.add_child(label)
 
+@warning_ignore("shadowed_variable_base_class")
 func draw_spawn_point(spawn_name: String, position: Vector2):
 	# Dessiner un cercle pour le spawn
 	var marker = Node2D.new()
@@ -130,3 +133,28 @@ func draw_spawn_point(spawn_name: String, position: Vector2):
 	# On va dessiner un cercle via _draw
 	marker.set_script(preload("res://viewer/SpawnMarker.gd"))
 	marker.set("spawn_name", spawn_name)
+	
+func draw_poi(poi: POIElement):
+	# Couleur selon le type
+	var poi_color = Color.WHITE
+	if poi is ChestElement:
+		poi_color = Color(1.0, 0.84, 0.0)  # Or (coffre)
+	elif poi is NPCElement:
+		poi_color = Color(0.0, 1.0, 0.5)  # Vert clair (PNJ)
+	elif poi is LoreStoneElement:
+		poi_color = Color(0.5, 0.7, 1.0)  # Bleu clair (lore)
+	
+	# Dessiner un carré pour le POI
+	var rect = ColorRect.new()
+	rect.position = poi.position - Vector2(15, 15)  # Centré
+	rect.size = Vector2(30, 30)
+	rect.color = poi_color
+	draw_area.add_child(rect)
+	
+	# Ajouter un label
+	var label = Label.new()
+	label.text = poi.poi_name
+	label.position = poi.position + Vector2(-50, 20)
+	label.add_theme_font_size_override("font_size", 10)
+	label.add_theme_color_override("font_color", poi_color)
+	draw_area.add_child(label)

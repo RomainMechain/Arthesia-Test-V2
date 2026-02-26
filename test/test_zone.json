@@ -58,6 +58,44 @@
 	  "locked": false,
 	  "required_key_id": "",
 	  "min_level": 0
+	},
+	{
+	  "element_type": "poi",
+	  "poi_type": "chest",
+	  "id": "chest_001",
+	  "position": [200, 300],
+	  "poi_name": "Coffre du Débutant",
+	  "interaction_text": "Ouvrir le coffre",
+	  "contained_items": ["sword_rusty", "potion_health"],
+	  "item_quantities": [1, 3],
+	  "gold": 50,
+	  "respawnable": false,
+	  "opened": false
+	},
+	{
+	  "element_type": "poi",
+	  "poi_type": "npc",
+	  "id": "npc_elder",
+	  "position": [400, 300],
+	  "poi_name": "Ancien du Village",
+	  "interaction_text": "Parler à l'Ancien",
+	  "dialogues": [
+		"Bienvenue, jeune Marqué.",
+		"La Tour t'appelle vers le haut.",
+	    "Méfie-toi des Gardiens."
+	  ],
+	  "quest_id": "quest_first_steps",
+	  "npc_type": "elder"
+	},
+	{
+	  "element_type": "poi",
+	  "poi_type": "lore_stone",
+	  "id": "lore_monument",
+	  "position": [600, 300],
+	  "poi_name": "Monument Ancien",
+	  "interaction_text": "Examiner l'inscription",
+	  "lore_text": "Inscription gravée :\n\n'La Tour se souvient.\nNous avons oublié.\nL'Ascension nous rappellera.'\n\n— Les Architectes",
+	  "lore_category": "architects"
 	}
   ]
 }

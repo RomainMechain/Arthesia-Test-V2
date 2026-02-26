@@ -114,6 +114,19 @@ static func _create_element_from_dict(data: Dictionary) -> ZoneElement:
 			return WallElement.from_dict(data)
 		"exit":
 			return ExitElement.from_dict(data)
+		"poi":
+			# Déterminer le sous-type de POI
+			var poi_type = data.get("poi_type", "")
+			match poi_type:
+				"chest":
+					return ChestElement.from_dict(data)
+				"npc":
+					return NPCElement.from_dict(data)
+				"lore_stone":
+					return LoreStoneElement.from_dict(data)
+				_:
+					# POI générique
+					return POIElement.from_dict(data)
 		_:
 			# Type inconnu, on crée un ZoneElement de base
 			push_warning("Unknown element type: %s" % element_type)
