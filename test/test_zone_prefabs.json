@@ -1,0 +1,102 @@
+{
+  "id": "floor1_zone_prefabs_test",
+  "name": "Zone Test Prefabs",
+  "floor_id": 1,
+  "theme_tags": ["test", "prefabs"],
+  "level_range": [1, 5],
+  "description": "Zone de test pour le système de prefabs.",
+  "size": [1200, 800],
+  
+  "spawn_points": {
+	"default": [600, 400]
+  },
+  
+  "prefab_instances": [
+	{
+	  "prefab_id": "house_simple",
+	  "instance_id": "house_001",
+	  "position": [200, 200],
+	  "rotation": 0,
+	  "scale": 1.0,
+	  "overrides": {}
+	},
+	{
+	  "prefab_id": "house_simple",
+	  "instance_id": "house_002",
+	  "position": [400, 200],
+	  "rotation": 0,
+	  "scale": 1.0,
+	  "overrides": {}
+	},
+	{
+	  "prefab_id": "tree_oak",
+	  "instance_id": "tree_001",
+	  "position": [600, 300],
+	  "rotation": 0,
+	  "scale": 1.0,
+	  "overrides": {}
+	},
+	{
+	  "prefab_id": "tree_oak",
+	  "instance_id": "tree_002",
+	  "position": [700, 350],
+	  "rotation": 0,
+	  "scale": 1.0,
+	  "overrides": {}
+	},
+	{
+	  "prefab_id": "tree_oak",
+	  "instance_id": "tree_003",
+	  "position": [650, 450],
+	  "rotation": 0,
+	  "scale": 1.0,
+	  "overrides": {}
+	}
+  ],
+  
+  "elements": [
+	{
+	  "element_type": "wall",
+	  "id": "wall_north",
+	  "position": [0, 0],
+	  "size": [1200, 50],
+	  "wall_type": "stone",
+	  "color": "#808080"
+	},
+	{
+	  "element_type": "wall",
+	  "id": "wall_south",
+	  "position": [0, 750],
+	  "size": [1200, 50],
+	  "wall_type": "stone",
+	  "color": "#808080"
+	},
+	{
+	  "element_type": "wall",
+	  "id": "wall_west",
+	  "position": [0, 0],
+	  "size": [50, 800],
+	  "wall_type": "stone",
+	  "color": "#808080"
+	},
+	{
+	  "element_type": "wall",
+	  "id": "wall_east",
+	  "position": [1150, 0],
+	  "size": [50, 800],
+	  "wall_type": "stone",
+	  "color": "#808080"
+	},
+	{
+	  "element_type": "poi",
+	  "poi_type": "npc",
+	  "id": "npc_test",
+	  "position": [600, 500],
+	  "poi_name": "PNJ Test",
+	  "interaction_text": "Parler",
+	  "dialogues": ["Bonjour, les prefabs fonctionnent !"],
+	  "quest_id": "",
+	  "npc_type": "villager"
+	}
+  ]
+}

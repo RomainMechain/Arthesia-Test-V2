@@ -40,6 +40,13 @@ class_name ZoneData
 @export var spawn_points: Dictionary = {}
 
 # =============================================================================
+# PREFABS
+# =============================================================================
+
+## Instances de prefabs dans cette zone
+@export var prefab_instances: Array[PrefabInstance] = []
+
+# =============================================================================
 # ÉLÉMENTS DE LA ZONE
 # =============================================================================
 
@@ -60,6 +67,7 @@ func to_dict() -> Dictionary:
 		"description": description,
 		"size": [size.x, size.y],
 		"spawn_points": _spawn_points_to_dict(),
+		"prefab_instances": prefab_instances.map(func(p): return p.to_dict()),
 		"elements": elements.map(func(e): return e.to_dict())
 	}
 
@@ -88,6 +96,10 @@ static func from_dict(data: Dictionary) -> ZoneData:
 	# Si aucun spawn point défini, créer un "default"
 	if zone.spawn_points.is_empty():
 		zone.spawn_points["default"] = Vector2(100, 100)
+		
+	# Charger les prefab instances
+	for prefab_data in data.get("prefab_instances", []):
+		zone.prefab_instances.append(PrefabInstance.from_dict(prefab_data))
 	
 	# Charger les éléments
 	for element_data in data.get("elements", []):

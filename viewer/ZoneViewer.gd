@@ -6,7 +6,7 @@ extends Node2D
 # =============================================================================
 
 ## Chemin du fichier JSON à charger
-@export_file("*.json") var zone_json_path: String = "res://test/test_zone.json"
+@export_file("*.json") var zone_json_path: String = "res://test/test_zone_prefabs.json"
 
 ## Zoom de la caméra (plus petit = plus zoomé)
 @export var camera_zoom: float = 1.0
@@ -42,25 +42,12 @@ func _ready():
 # =============================================================================
 
 func load_and_display_zone():
-	# Charger le JSON
-	var file = FileAccess.open(zone_json_path, FileAccess.READ)
-	if file == null:
-		push_error("Impossible d'ouvrir le fichier : %s" % zone_json_path)
+	# Utiliser ZoneLoader pour charger la zone
+	zone = ZoneLoader.load_zone_from_json(zone_json_path)
+	
+	if zone == null:
+		push_error("Failed to load zone from: %s" % zone_json_path)
 		return
-	
-	var json_text = file.get_as_text()
-	file.close()
-	
-	# Parser le JSON
-	var json = JSON.new()
-	var parse_result = json.parse(json_text)
-	
-	if parse_result != OK:
-		push_error("Erreur de parsing JSON")
-		return
-	
-	# Créer la ZoneData
-	zone = ZoneData.from_dict(json.data)
 	
 	print("✅ Zone chargée : %s" % zone.name)
 	print("   Taille : %s" % zone.size)

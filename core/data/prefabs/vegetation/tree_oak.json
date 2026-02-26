@@ -1,0 +1,18 @@
+{
+  "prefab_id": "tree_oak",
+  "prefab_type": "vegetation",
+  "name": "Chêne",
+  "size": [40, 40],
+  "anchor_point": [20, 20],
+  
+  "elements": [
+	{
+	  "element_type": "wall",
+	  "id": "trunk",
+	  "position": [0, 0],
+	  "size": [40, 40],
+	  "wall_type": "tree",
+	  "color": "#228B22"
+	}
+  ]
+}
