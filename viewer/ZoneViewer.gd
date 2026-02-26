@@ -9,7 +9,7 @@ extends Node2D
 @export_file("*.json") var zone_json_path: String = "res://test/test_zone_prefabs.json"
 
 ## Zoom de la caméra (plus petit = plus zoomé)
-@export var camera_zoom: float = 1.0
+@export var camera_zoom: float = 0.5
 
 # =============================================================================
 # RÉFÉRENCES

@@ -6,7 +6,7 @@ class_name PrefabLoader
 static var _prefab_cache: Dictionary = {}
 
 ## Chemin de base des prefabs
-static var PREFABS_BASE_PATH: String = "res://data/prefabs/"
+static var PREFABS_BASE_PATH: String = "res://core/data/prefabs/"
 
 ## Charger un prefab depuis son ID
 static func load_prefab(prefab_id: String) -> PrefabData:
