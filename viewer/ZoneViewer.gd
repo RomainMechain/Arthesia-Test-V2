@@ -6,7 +6,7 @@ extends Node2D
 # =============================================================================
 
 ## Chemin du fichier JSON à charger
-@export_file("*.json") var zone_json_path: String = "res://test/test_zone_prefabs.json"
+@export_file("*.json") var zone_json_path: String = "res://test/village_004.json"
 
 ## Zoom de la caméra (plus petit = plus zoomé)
 @export var camera_zoom: float = 0.5

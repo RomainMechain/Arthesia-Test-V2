@@ -1,0 +1,246 @@
+{
+  "id": "floor1_zone_carrefour_echos",
+  "name": "Le Carrefour d'Échos",
+  "floor_id": 1,
+  "theme_tags": [
+    "village",
+    "medieval",
+    "plains",
+    "quest",
+    "riddle",
+    "architects",
+    "dawn"
+  ],
+  "level_range": [
+    1,
+    5
+  ],
+  "description": "Le Carrefour d'Échos est un paisible village des Plaines d'Aube, où le temps semble s'être arrêté. Au centre, une ancienne stèle attire les regards, promettant des secrets à ceux qui sauront déchiffrer son énigme. Les murmures des villageois racontent des histoires d'Architectes et de chemins oubliés.",
+  "size": [
+    1500,
+    1000
+  ],
+  "spawn_points": {
+    "default": [
+      750,
+      500
+    ],
+    "entrance_north": [
+      750,
+      100
+    ],
+    "entrance_south": [
+      750,
+      900
+    ],
+    "entrance_west": [
+      100,
+      500
+    ],
+    "entrance_east": [
+      1400,
+      500
+    ]
+  },
+  "prefab_instances": [
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_001",
+      "position": [
+        450,
+        250
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_002",
+      "position": [
+        950,
+        250
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_003",
+      "position": [
+        450,
+        650
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_004",
+      "position": [
+        950,
+        650
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_001",
+      "position": [
+        200,
+        150
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_002",
+      "position": [
+        1300,
+        150
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_003",
+      "position": [
+        200,
+        800
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_004",
+      "position": [
+        1300,
+        800
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_005",
+      "position": [
+        700,
+        180
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_006",
+      "position": [
+        700,
+        780
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    }
+  ],
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        0,
+        950
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        1450,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "lore_stone",
+      "id": "lore_stele_echos",
+      "position": [
+        720,
+        470
+      ],
+      "poi_name": "Stèle des Échos",
+      "interaction_text": "Examiner",
+      "lore_text": "Les Architectes, avant la Fracture, cachèrent un savoir profond. Pour que la voie s'ouvre, cherche là où les racines de l'ancien chêne embrassent la terre, et où le murmure du vent chante la mélodie d'un passé oublié. Un pas vers l'ombre, un autre vers la lumière, là se trouve la clef.",
+      "lore_category": "architects"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_elara",
+      "position": [
+        620,
+        570
+      ],
+      "poi_name": "Elara, Ancienne du Village",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Bienvenue, Marqué. La stèle au centre a bien des secrets, mais peu savent les déchiffrer.",
+        "Les Architectes ont laissé des traces partout, même ici, dans les Plaines d'Aube.",
+        "J'espère que tu trouveras ce que tu cherches, jeune voyageur."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    }
+  ]
+}

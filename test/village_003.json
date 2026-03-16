@@ -1,0 +1,341 @@
+{
+  "id": "floor1_zone_clairval_village",
+  "name": "Clairval, Village de l'Aube",
+  "floor_id": 1,
+  "theme_tags": [
+    "village",
+    "pastoral",
+    "architects",
+    "enigma",
+    "medieval"
+  ],
+  "level_range": [
+    1,
+    5
+  ],
+  "description": "Un paisible hameau niché au cœur des Plaines d'Aube, où les maisons de bois s'animent sous le ciel doré. Une ancienne stèle orne sa place centrale, murmurant des secrets oubliés aux Marqués attentifs.",
+  "size": [
+    1500,
+    1000
+  ],
+  "spawn_points": {
+    "default": [
+      750,
+      500
+    ],
+    "entrance_north": [
+      750,
+      50
+    ],
+    "entrance_south": [
+      750,
+      950
+    ]
+  },
+  "prefab_instances": [
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_001",
+      "position": [
+        200,
+        300
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_002",
+      "position": [
+        200,
+        700
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_003",
+      "position": [
+        1300,
+        300
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_004",
+      "position": [
+        1300,
+        700
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_005",
+      "position": [
+        750,
+        150
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_006",
+      "position": [
+        750,
+        850
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_001",
+      "position": [
+        150,
+        250
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_002",
+      "position": [
+        250,
+        350
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_003",
+      "position": [
+        150,
+        750
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_004",
+      "position": [
+        250,
+        650
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_005",
+      "position": [
+        1350,
+        250
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_006",
+      "position": [
+        1250,
+        350
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_007",
+      "position": [
+        1350,
+        750
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_008",
+      "position": [
+        1250,
+        650
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_009",
+      "position": [
+        700,
+        100
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_010",
+      "position": [
+        800,
+        100
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_011",
+      "position": [
+        700,
+        900
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_012",
+      "position": [
+        800,
+        900
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    }
+  ],
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        750,
+        0
+      ],
+      "size": [
+        1500,
+        10
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        750,
+        1000
+      ],
+      "size": [
+        1500,
+        10
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        1500,
+        500
+      ],
+      "size": [
+        10,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0,
+        500
+      ],
+      "size": [
+        10,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "lore_stone",
+      "id": "lore_stela_clairval",
+      "position": [
+        750,
+        500
+      ],
+      "poi_name": "Stèle des Murmures",
+      "interaction_text": "Déchiffrer les runes",
+      "lore_text": "Ici, la lumière de l'Aube se fait ombre. Cherche l'arbre sans feuilles, là où le dernier rayon caresse la pierre. Il te montrera le chemin vers les oubliés, au-delà du voile.",
+      "lore_category": "architects"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_elara_clairval",
+      "position": [
+        650,
+        550
+      ],
+      "poi_name": "Elara, Ancienne du Hameau",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Bienvenue, Marqué. La stèle au centre a toujours été là, silencieuse. Certains disent qu'elle contient des vérités anciennes.",
+        "Les Architectes ont tissé ce monde bien avant la Fracture. Leurs secrets dorment, attendant d'être éveillés par ceux qui écoutent vraiment.",
+        "Si tu cherches des chemins cachés, suis les indices que la pierre te donne. Mais attention, certains mystères ne veulent pas être découverts."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_borin_clairval",
+      "position": [
+        250,
+        350
+      ],
+      "poi_name": "Borin, Fermier",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Les récoltes sont bonnes cette année, grâce à la lumière constante de l'Aube. Un don des anciens, sans doute.",
+        "Parfois, je trouve des fragments de poterie étrange dans mes champs, gravés de symboles que je ne comprends pas. Des reliques des Architectes, je suppose."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    }
+  ]
+}

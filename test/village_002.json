@@ -1,0 +1,257 @@
+{
+  "id": "floor1_zone_aubeclair",
+  "name": "Village d'Aubeclair",
+  "floor_id": 1,
+  "theme_tags": [
+    "village",
+    "pastoral",
+    "architecture_ancienne",
+    "point_de_depart"
+  ],
+  "level_range": [
+    1,
+    5
+  ],
+  "description": "Niché au cœur des Plaines d'Aube, ce petit village offre un refuge paisible. De modestes habitations de bois entourent une clairière où les Marqués peuvent trouver répit et les premiers indices de leur quête avant de poursuivre leur ascension.",
+  "size": [
+    1500,
+    1000
+  ],
+  "spawn_points": {
+    "default": [
+      750,
+      500
+    ],
+    "entrance_north": [
+      750,
+      50
+    ],
+    "entrance_south": [
+      750,
+      950
+    ]
+  },
+  "prefab_instances": [
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_001",
+      "position": [
+        300,
+        400
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_002",
+      "position": [
+        700,
+        300
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_003",
+      "position": [
+        1100,
+        500
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_001",
+      "position": [
+        150,
+        200
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_002",
+      "position": [
+        250,
+        600
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_003",
+      "position": [
+        400,
+        100
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_004",
+      "position": [
+        600,
+        700
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_005",
+      "position": [
+        900,
+        150
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_006",
+      "position": [
+        1200,
+        400
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_007",
+      "position": [
+        1350,
+        800
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_008",
+      "position": [
+        500,
+        850
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_009",
+      "position": [
+        1000,
+        750
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    }
+  ],
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        750,
+        0
+      ],
+      "size": [
+        1500,
+        10
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        750,
+        1000
+      ],
+      "size": [
+        1500,
+        10
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0,
+        500
+      ],
+      "size": [
+        10,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        1500,
+        500
+      ],
+      "size": [
+        10,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_elder_elara",
+      "position": [
+        750,
+        450
+      ],
+      "poi_name": "Elara, Ancienne du village",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Bienvenue, Marqué. L'appel de la Tour est puissant, n'est-ce pas ? Sois prudent dans ton voyage, l'inconnu guette à chaque étage.",
+        "Les Architectes... leur présence se ressent encore ici, dans la terre même. Cherche leurs vestiges, ils contiennent des vérités oubliées.",
+        "La Fracture a tout changé, mais nous continuons d'espérer un jour où les étages ne feront qu'un. C'est peut-être la mission des Marqués."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "lore_stone",
+      "id": "lore_stone_aubeclair",
+      "position": [
+        350,
+        550
+      ],
+      "poi_name": "Stèle des Fondateurs",
+      "interaction_text": "Examiner",
+      "lore_text": "Gravée d'étranges symboles et d'une langue oubliée, cette pierre semble raconter l'arrivée des Architectes, porteurs de savoirs cosmiques. Elle vibre faiblement, comme si elle résonnait encore avec l'énergie distordue de la Fracture, un écho d'un monde lointain.",
+      "lore_category": "architects"
+    }
+  ]
+}

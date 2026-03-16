@@ -1,0 +1,285 @@
+{
+  "id": "floor1_zone_port_rosee",
+  "name": "Port-Rosée du Lac Éclat",
+  "floor_id": 1,
+  "theme_tags": [
+    "village",
+    "lake",
+    "fishing",
+    "pastoral",
+    "aube",
+    "architects_lore"
+  ],
+  "level_range": [
+    1,
+    5
+  ],
+  "description": "Niché sur les rives paisibles du Lac Éclat, Port-Rosée est un petit village de pêcheurs où la vie s'écoule au rythme des vagues. Les murmures des Architectes y sont parfois portés par la brise marine, se mêlant aux chants des pêcheurs et à la lumière éternelle de l'Aube.",
+  "size": [
+    1500,
+    1000
+  ],
+  "spawn_points": {
+    "default": [
+      750,
+      500
+    ],
+    "entrance_north": [
+      750,
+      70
+    ],
+    "entrance_south": [
+      750,
+      930
+    ],
+    "entrance_west": [
+      70,
+      500
+    ],
+    "entrance_east": [
+      1430,
+      500
+    ]
+  },
+  "prefab_instances": [
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_port_001",
+      "position": [
+        200,
+        400
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_port_002",
+      "position": [
+        350,
+        550
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_port_003",
+      "position": [
+        250,
+        250
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_port_004",
+      "position": [
+        400,
+        700
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_port_005",
+      "position": [
+        550,
+        450
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_port_001",
+      "position": [
+        150,
+        300
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_port_002",
+      "position": [
+        300,
+        800
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_port_003",
+      "position": [
+        600,
+        200
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_port_004",
+      "position": [
+        700,
+        600
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_port_005",
+      "position": [
+        850,
+        350
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_port_006",
+      "position": [
+        1000,
+        750
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_port_007",
+      "position": [
+        1100,
+        250
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    }
+  ],
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        0,
+        950
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        1450,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_elara_fisherman",
+      "position": [
+        500,
+        500
+      ],
+      "poi_name": "Elara la Pêcheuse",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Les eaux du Lac Éclat sont généreuses, si l'on sait les respecter. Elles murmurent parfois d'anciennes légendes.",
+        "La Fracture a changé bien des choses, mais le lac, lui, reste une source constante de vie. C'est notre ancre dans ce monde fragmenté.",
+        "J'ai entendu dire que les Architectes avaient des appareils pour puiser l'énergie des eaux... un savoir perdu, hélas."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "lore_stone",
+      "id": "lore_stone_lac",
+      "position": [
+        1200,
+        400
+      ],
+      "poi_name": "Stèle du Lac",
+      "interaction_text": "Examiner",
+      "lore_text": "Une stèle couverte de symboles architectes, partiellement submergée par les eaux du Lac Éclat. Le texte déchiffrable parle de 'flux d'énergie cosmique' et de 'résonance aquatique', suggérant que les Architectes utilisaient les lacs comme conduits pour des forces insondables avant la Fracture.",
+      "lore_category": "architects"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_kael_elder",
+      "position": [
+        300,
+        450
+      ],
+      "poi_name": "Maître Kael",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Bienvenue, Marqué. Ton chemin te mène vers les hauteurs, comme tant d'autres. Mais souviens-toi, les fondations de ce monde sont ici, dans les simples gestes.",
+        "Les Architectes ont tissé la réalité de nos étages. Chaque fragment de mémoire que vous restaurez aide à recoller les morceaux de notre passé brisé.",
+        "La brume d'aube qui enveloppe nos plaines cache parfois des vérités profondes, si l'on prend le temps de les chercher."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    }
+  ]
+}
