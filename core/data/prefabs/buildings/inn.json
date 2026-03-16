@@ -1,0 +1,71 @@
+{
+  "prefab_id": "inn",
+  "prefab_type": "building",
+  "name": "Auberge",
+  "size": [180, 140],
+  "anchor_point": [0, 0],
+  
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [0, 0],
+      "size": [180, 10],
+      "wall_type": "wood",
+      "color": "#A0522D"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [0, 130],
+      "size": [180, 10],
+      "wall_type": "wood",
+      "color": "#A0522D"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [0, 0],
+      "size": [10, 140],
+      "wall_type": "wood",
+      "color": "#A0522D"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [170, 0],
+      "size": [10, 140],
+      "wall_type": "wood",
+      "color": "#A0522D"
+    },
+    {
+      "element_type": "wall",
+      "id": "roof",
+      "position": [10, 10],
+      "size": [160, 120],
+      "wall_type": "wood",
+      "color": "#8B4513"
+    },
+    {
+      "element_type": "wall",
+      "id": "sign",
+      "position": [150, -10],
+      "size": [20, 30],
+      "wall_type": "wood",
+      "color": "#DAA520"
+    },
+    {
+      "element_type": "exit",
+      "id": "door",
+      "position": [80, 130],
+      "size": [20, 10],
+      "target_zone_id": "interior",
+      "target_spawn_name": "entrance",
+      "exit_type": "door",
+      "color": "#654321",
+      "locked": false,
+      "required_key_id": "",
+      "min_level": 0
+    }
+  ]
+}

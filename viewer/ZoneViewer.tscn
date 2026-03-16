@@ -152,6 +152,7 @@ func draw_poi(poi: POIElement):
 
 [node name="ZoneViewer" type="Node2D"]
 script = SubResource("GDScript_aes4e")
+zone_json_path = "res://test/village_complet.json"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

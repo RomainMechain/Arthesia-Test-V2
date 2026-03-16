@@ -4,7 +4,7 @@
 # API GEMINI
 # ============================================================================
 
-GEMINI_API_KEY = "AIzaSyAbm2vzM0IkGuCfkOjebEn6ayjzEXmWwxs"  
+GEMINI_API_KEY = "key"  
 GEMINI_MODEL = "models/gemini-2.5-flash"  # Modèle à utiliser
 
 # ============================================================================
@@ -26,6 +26,18 @@ AVAILABLE_PREFABS = {
             "name": "Maison Simple",
             "size": [120, 100],
             "description": "Petite maison en bois avec une porte"
+        },
+        {
+            "id": "forge",
+            "name": "Forge",
+            "size": [140, 120],
+            "description": "Forge en pierre avec cheminée"
+        },
+        {
+            "id": "inn",
+            "name": "Auberge",
+            "size": [180, 140],
+            "description": "Grande auberge en bois avec enseigne"
         }
     ],
     "vegetation": [
@@ -34,6 +46,12 @@ AVAILABLE_PREFABS = {
             "name": "Chêne",
             "size": [40, 40],
             "description": "Un chêne standard"
+        },
+        {
+            "id": "tree_cluster_5",
+            "name": "Groupe de 5 Arbres",
+            "size": [120, 120],
+            "description": "Un groupe de 5 arbres pré-placés"
         }
     ]
 }

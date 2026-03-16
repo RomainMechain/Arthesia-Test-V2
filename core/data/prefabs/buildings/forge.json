@@ -1,0 +1,63 @@
+{
+  "prefab_id": "forge",
+  "prefab_type": "building",
+  "name": "Forge",
+  "size": [140, 120],
+  "anchor_point": [0, 0],
+  
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [0, 0],
+      "size": [140, 10],
+      "wall_type": "stone",
+      "color": "#696969"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [0, 110],
+      "size": [140, 10],
+      "wall_type": "stone",
+      "color": "#696969"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [0, 0],
+      "size": [10, 120],
+      "wall_type": "stone",
+      "color": "#696969"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [130, 0],
+      "size": [10, 120],
+      "wall_type": "stone",
+      "color": "#696969"
+    },
+    {
+      "element_type": "wall",
+      "id": "chimney",
+      "position": [110, -20],
+      "size": [20, 40],
+      "wall_type": "stone",
+      "color": "#4B4B4B"
+    },
+    {
+      "element_type": "exit",
+      "id": "door",
+      "position": [60, 110],
+      "size": [20, 10],
+      "target_zone_id": "interior",
+      "target_spawn_name": "entrance",
+      "exit_type": "door",
+      "color": "#8B4513",
+      "locked": false,
+      "required_key_id": "",
+      "min_level": 0
+    }
+  ]
+}

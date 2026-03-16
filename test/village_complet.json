@@ -1,0 +1,272 @@
+{
+  "id": "floor1_zone_sanctuary_dawn",
+  "name": "Sanctuaire de l'Aube",
+  "floor_id": 1,
+  "theme_tags": [
+    "village",
+    "holy",
+    "architects",
+    "lore",
+    "pastoral",
+    "pilgrimage"
+  ],
+  "level_range": [
+    1,
+    5
+  ],
+  "description": "Un havre de paix baigné par l'éternelle aurore des Plaines. Ce village, érigé autour d'un ancien monolithe Architecte, est un lieu de pèlerinage pour les Marqués en quête de vérité, où les murmures du passé résonnent dans chaque pierre et chaque âme pieuse.",
+  "size": [
+    1500,
+    1000
+  ],
+  "spawn_points": {
+    "default": [
+      750,
+      500
+    ],
+    "entrance_north": [
+      750,
+      70
+    ],
+    "entrance_south": [
+      750,
+      930
+    ]
+  },
+  "prefab_instances": [
+    {
+      "prefab_id": "inn",
+      "instance_id": "inn_sanctuary",
+      "position": [
+        660,
+        300
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "forge",
+      "instance_id": "forge_dawn",
+      "position": [
+        880,
+        350
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_001",
+      "position": [
+        480,
+        250
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_002",
+      "position": [
+        480,
+        400
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_003",
+      "position": [
+        1000,
+        250
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_004",
+      "position": [
+        1000,
+        400
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_005",
+      "position": [
+        700,
+        550
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "trees_001",
+      "position": [
+        200,
+        150
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "trees_002",
+      "position": [
+        1100,
+        150
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "oak_001",
+      "position": [
+        300,
+        600
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "oak_002",
+      "position": [
+        1200,
+        650
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "oak_003",
+      "position": [
+        700,
+        100
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    }
+  ],
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        0,
+        950
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        1450,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "lore_stone",
+      "id": "lore_monolith_001",
+      "position": [
+        730,
+        480
+      ],
+      "poi_name": "Monolithe des Premiers Mots",
+      "interaction_text": "Examiner",
+      "lore_text": "Cette pierre, taillée par les Architectes il y a des éons, résonne encore des échos de leur sagesse. Elle marque le lieu où la Fracture aurait déchiré la réalité, scindant Arthesia en fragments. Ses glyphes, incompréhensibles, semblent pointer vers le ciel, vers la Tour.",
+      "lore_category": "architects"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_elder_elara",
+      "position": [
+        700,
+        500
+      ],
+      "poi_name": "Ancien Elara",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Bienvenue, Marqué. Ressens-tu l'appel de la Tour, cet écho de notre passé oublié qui nous pousse vers les cieux ?",
+        "Les Architectes ont laissé des fragments de vérité, disséminés à travers les étages. Chaque pas est une page de l'histoire.",
+        "Le Sanctuaire de l'Aube est un lieu de méditation. Cherche la sagesse intérieure, elle te guidera au-delà de la Fracture."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "lore_stone",
+      "id": "lore_tablet_001",
+      "position": [
+        550,
+        350
+      ],
+      "poi_name": "Fragment de Tablette Ancienne",
+      "interaction_text": "Examiner",
+      "lore_text": "Une inscription à peine lisible, érodée par le temps : '...après l'Unité, vint la Dispersion. Et de la Dispersion, la Quête de l'Ascension.' Un aperçu du désespoir des Architectes et de l'espoir renaissant des Marqués.",
+      "lore_category": "fracture"
+    }
+  ]
+}
