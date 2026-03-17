@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://br7ct4o000xfx"]
+
+[ext_resource type="Script" uid="uid://lx85myimjfx4" path="res://player/Player.gd" id="1_ulp21"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ehsmr"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ulp21"]
+size = Vector2(28, 28)
+
+[node name="Player" type="CharacterBody2D"]
+process_mode = 3
+script = ExtResource("1_ulp21")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_ehsmr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ulp21")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)

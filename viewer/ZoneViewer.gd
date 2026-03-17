@@ -36,6 +36,7 @@ func _ready():
 	
 	# Charger et afficher la zone
 	load_and_display_zone()
+	spawn_player()
 
 # =============================================================================
 # CHARGEMENT
@@ -82,18 +83,32 @@ func display_zone():
 		draw_spawn_point(spawn_name, zone.spawn_points[spawn_name])
 
 func draw_wall(wall: WallElement):
+	# Créer un StaticBody2D pour la collision
+	var static_body = StaticBody2D.new()
+	static_body.position = wall.position
+	draw_area.add_child(static_body)
+	
+	# Ajouter une CollisionShape2D
+	var collision = CollisionShape2D.new()
+	var shape = RectangleShape2D.new()
+	shape.size = wall.size
+	collision.shape = shape
+	collision.position = wall.size / 2  # Centrer la shape
+	static_body.add_child(collision)
+	
+	# Ajouter le visuel (ColorRect) comme enfant du StaticBody
 	var rect = ColorRect.new()
-	rect.position = wall.position
+	rect.position = Vector2.ZERO  # Position relative au StaticBody
 	rect.size = wall.size
 	rect.color = wall.color
-	draw_area.add_child(rect)
+	static_body.add_child(rect)
 	
 	# Ajouter un label avec l'ID
 	var label = Label.new()
 	label.text = wall.id
-	label.position = wall.position + Vector2(5, 5)
+	label.position = Vector2(5, 5)
 	label.add_theme_font_size_override("font_size", 10)
-	draw_area.add_child(label)
+	static_body.add_child(label)
 
 func draw_exit(exit: ExitElement):
 	var rect = ColorRect.new()
@@ -145,3 +160,22 @@ func draw_poi(poi: POIElement):
 	label.add_theme_font_size_override("font_size", 10)
 	label.add_theme_color_override("font_color", poi_color)
 	draw_area.add_child(label)
+	
+	
+func spawn_player():
+	"""Instancie le joueur dans la zone"""
+	
+	# Charger la scène Player
+	var player_scene = load("res://player/Player.tscn")
+	var player = player_scene.instantiate()
+	
+	# Positionner le joueur au spawn point par défaut
+	if zone:
+		player.position = zone.get_spawn_point("default")
+	else:
+		player.position = Vector2(400, 400)  # Position par défaut si pas de zone
+	
+	# Ajouter le joueur à la scène
+	add_child(player)
+	
+	print("✅ Player spawné à la position : %s" % player.position)
