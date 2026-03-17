@@ -1,0 +1,258 @@
+{
+  "id": "floor1_zone_foret_elucidator",
+  "name": "Les Bois de l'Éveil",
+  "floor_id": 1,
+  "theme_tags": [
+    "forest",
+    "lake",
+    "quest",
+    "architects",
+    "mystery"
+  ],
+  "level_range": [
+    1,
+    5
+  ],
+  "description": "Dans les profondeurs verdoyantes de l'Étage 1 s'étend une clairière mystique, traversée par un sentier ancestral. En son cœur, un lac serein abrite une stèle énigmatique, murmure d'un pouvoir oublié et d'une lame sacrée nommée Elucidator, attendant d'être découverte.",
+  "size": [
+    1500,
+    1000
+  ],
+  "spawn_points": {
+    "default": [
+      750,
+      500
+    ],
+    "entrance_north": [
+      750,
+      100
+    ],
+    "entrance_south": [
+      750,
+      900
+    ]
+  },
+  "prefab_instances": [
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "tree_cluster_001",
+      "position": [
+        150,
+        150
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "tree_cluster_002",
+      "position": [
+        1150,
+        200
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "tree_cluster_003",
+      "position": [
+        250,
+        750
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "tree_cluster_004",
+      "position": [
+        1050,
+        650
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_001",
+      "position": [
+        100,
+        450
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_002",
+      "position": [
+        1400,
+        400
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_003",
+      "position": [
+        500,
+        100
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_004",
+      "position": [
+        950,
+        120
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_005",
+      "position": [
+        450,
+        880
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_006",
+      "position": [
+        900,
+        850
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_007",
+      "position": [
+        350,
+        500
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_008",
+      "position": [
+        1100,
+        550
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    }
+  ],
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        0,
+        950
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        1450,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "lore_stone",
+      "id": "lore_elucidator_stele",
+      "position": [
+        750,
+        500
+      ],
+      "poi_name": "Stèle du Lac Serein",
+      "interaction_text": "Examiner",
+      "lore_text": "Ici, sous le voile des anciens, repose le murmure d'Elucidator. Seul un cœur pur, guidé par la lumière des Architectes, pourra déverrouiller son secret et révéler le chemin vers sa puissance. Cherchez la marque du Serpent Ailé dans les ruines oubliées.",
+      "lore_category": "architects"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_old_hermit",
+      "position": [
+        300,
+        600
+      ],
+      "poi_name": "Ancien Gardien des Bois",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Beaucoup s'aventurent dans ces bois, cherchant des trésors...",
+        "La Stèle du Lac? Un secret ancien... On dit qu'elle parle d'une épée, Elucidator. Mais sa légende est voilée par le temps.",
+        "Les Architectes... Ils ont laissé tant de choses derrière eux, des énigmes pour ceux qui osent chercher."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    }
+  ]
+}
