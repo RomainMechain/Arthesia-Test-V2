@@ -1,0 +1,174 @@
+{
+  "prefab_id": "shop_rune_wood_medium_01",
+  "prefab_type": "building",
+  "name": "Boutique de Runes Anciennes",
+  "size": [
+    120,
+    100
+  ],
+  "anchor_point": [
+    0,
+    0
+  ],
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "floor",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        120,
+        100
+      ],
+      "wall_type": "wood_floor",
+      "color": "#A0522D"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        120,
+        10
+      ],
+      "wall_type": "dark_wood",
+      "color": "#5C4033"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        0,
+        90
+      ],
+      "size": [
+        120,
+        10
+      ],
+      "wall_type": "dark_wood",
+      "color": "#5C4033"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0,
+        10
+      ],
+      "size": [
+        10,
+        80
+      ],
+      "wall_type": "dark_wood",
+      "color": "#5C4033"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        110,
+        10
+      ],
+      "size": [
+        10,
+        80
+      ],
+      "wall_type": "dark_wood",
+      "color": "#5C4033"
+    },
+    {
+      "element_type": "wall",
+      "id": "roof",
+      "position": [
+        -5,
+        -5
+      ],
+      "size": [
+        130,
+        110
+      ],
+      "wall_type": "dark_wood_roof",
+      "color": "#362D2D"
+    },
+    {
+      "element_type": "exit",
+      "id": "door_main",
+      "position": [
+        50,
+        90
+      ],
+      "size": [
+        20,
+        10
+      ],
+      "target_zone_id": "shop_rune_interior_01",
+      "target_spawn_name": "entrance",
+      "exit_type": "door",
+      "color": "#4A3B30",
+      "locked": false,
+      "required_key_id": "",
+      "min_level": 0
+    },
+    {
+      "element_type": "wall",
+      "id": "counter",
+      "position": [
+        30,
+        30
+      ],
+      "size": [
+        60,
+        10
+      ],
+      "wall_type": "wood_counter",
+      "color": "#6F4F28"
+    },
+    {
+      "element_type": "wall",
+      "id": "rune_display_west",
+      "position": [
+        20,
+        45
+      ],
+      "size": [
+        15,
+        15
+      ],
+      "wall_type": "stone_display",
+      "color": "#7C7C7C"
+    },
+    {
+      "element_type": "wall",
+      "id": "rune_display_east",
+      "position": [
+        85,
+        45
+      ],
+      "size": [
+        15,
+        15
+      ],
+      "wall_type": "stone_display",
+      "color": "#7C7C7C"
+    },
+    {
+      "element_type": "wall",
+      "id": "shop_sign",
+      "position": [
+        45,
+        -10
+      ],
+      "size": [
+        30,
+        10
+      ],
+      "wall_type": "wood_sign",
+      "color": "#5C4033"
+    }
+  ]
+}

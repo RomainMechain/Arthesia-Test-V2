@@ -1,0 +1,59 @@
+{
+  "id": "test_forge",
+  "name": "Test Forge Prefab",
+  "floor_id": 1,
+  "theme_tags": ["test"],
+  "level_range": [1, 5],
+  "description": "Zone de test pour le prefab forge",
+  "size": [800, 600],
+  
+  "spawn_points": {
+    "default": [400, 300]
+  },
+  
+  "prefab_instances": [
+    {
+      "prefab_id": "forge_stone_medium_01",
+      "instance_id": "forge_001",
+      "position": [300, 200],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    }
+  ],
+  
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [0, 0],
+      "size": [800, 50],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [0, 550],
+      "size": [800, 50],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [0, 0],
+      "size": [50, 600],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [750, 0],
+      "size": [50, 600],
+      "wall_type": "stone",
+      "color": "#808080"
+    }
+  ]
+}
