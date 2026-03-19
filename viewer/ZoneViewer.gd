@@ -82,6 +82,12 @@ func display_zone():
 	for spawn_name in zone.spawn_points:
 		draw_spawn_point(spawn_name, zone.spawn_points[spawn_name])
 
+	# NOUVEAU : Afficher les sprites des prefabs
+	if zone.has_meta("sprite_nodes"):
+		for sprite in zone.get_meta("sprite_nodes"):
+			draw_area.add_child(sprite)
+			print("✅ Sprite affiché : %s" % sprite.texture.resource_path)
+
 func draw_wall(wall: WallElement):
 	# Créer un StaticBody2D pour la collision
 	var static_body = StaticBody2D.new()

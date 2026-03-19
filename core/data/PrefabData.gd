@@ -27,6 +27,13 @@ var prefab_type: String = "other"
 @export var anchor_point: Vector2 = Vector2.ZERO
 
 # =============================================================================
+# VISUEL
+# =============================================================================
+
+## Configuration visuelle (optionnel)
+@export var visual_config: Dictionary = {}
+
+# =============================================================================
 # ÉLÉMENTS
 # =============================================================================
 
@@ -44,6 +51,7 @@ func to_dict() -> Dictionary:
 		"name": name,
 		"size": [size.x, size.y],
 		"anchor_point": [anchor_point.x, anchor_point.y],
+		"visual_config": visual_config,
 		"elements": elements.map(func(e): return e.to_dict())
 	}
 
@@ -59,6 +67,8 @@ static func from_dict(data: Dictionary) -> PrefabData:
 	
 	var ap = data.get("anchor_point", [0, 0])
 	prefab.anchor_point = Vector2(ap[0], ap[1])
+
+	prefab.visual_config = data.get("visual_config", {})
 	
 	# Charger les éléments
 	for element_data in data.get("elements", []):

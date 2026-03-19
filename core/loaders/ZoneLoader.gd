@@ -31,8 +31,21 @@ static func load_zone_from_json(filepath: String) -> ZoneData:
 	var zone = ZoneData.from_dict(data)
 	
 	# Charger et instancier les prefabs
+	var sprite_nodes = []  # Stocker les sprites à part
+
 	for prefab_instance in zone.prefab_instances:
-		var prefab_elements = PrefabLoader.load_and_instantiate(prefab_instance)
-		zone.elements.append_array(prefab_elements)
+		var result = PrefabLoader.load_and_instantiate(prefab_instance)
+		
+		# Ajouter les éléments de collision
+		if result.has("elements"):
+			zone.elements.append_array(result.elements)
+		
+		# Stocker le sprite pour l'afficher plus tard
+		if result.has("sprite_node") and result.sprite_node != null:
+			sprite_nodes.append(result.sprite_node)
+
+	# Stocker les sprites dans les métadonnées de la zone
+	if sprite_nodes.size() > 0:
+		zone.set_meta("sprite_nodes", sprite_nodes)
 	
 	return zone

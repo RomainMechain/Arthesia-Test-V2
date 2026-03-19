@@ -51,31 +51,69 @@ static func load_prefab_from_file(filepath: String) -> PrefabData:
 	
 	return PrefabData.from_dict(json.data)
 
-## Instancier un prefab (retourne les éléments avec positions ajustées)
-static func instantiate_prefab(prefab: PrefabData, position: Vector2) -> Array[ZoneElement]:
-	var instances: Array[ZoneElement] = []
+## Instancier un prefab (retourne un dictionnaire avec éléments + sprite)
+
+static func instantiate_prefab(prefab: PrefabData, position: Vector2) -> Dictionary:
+	var result = {
+		"elements": [],
+		"sprite_node": null
+	}
+
+	# DEBUG
+	print("🔍 DEBUG instantiate_prefab:")
+	print("  - prefab_id: %s" % prefab.prefab_id)
+	print("  - visual_config vide? %s" % prefab.visual_config.is_empty())
+	print("  - visual_config: %s" % prefab.visual_config)
 	
+	# Créer le sprite si le prefab a une config visuelle
+	if not prefab.visual_config.is_empty() and prefab.visual_config.has("sprite_path"):
+		var sprite_path = prefab.visual_config.get("sprite_path", "")
+		
+		if sprite_path != "" and FileAccess.file_exists(sprite_path):
+			print("  🎨 Création du sprite...")
+			var sprite = Sprite2D.new()
+			sprite.texture = load(sprite_path)
+			
+			# GARDER centered = true (défaut) et ajuster la position
+			sprite.centered = true
+			
+			# Position au CENTRE du prefab (pas au coin)
+			var prefab_size = prefab.size
+			sprite.position = position + (prefab_size / 2)
+			
+			# Appliquer offset si présent
+			if prefab.visual_config.has("sprite_offset"):
+				var offset = prefab.visual_config.sprite_offset
+				if offset is Array and offset.size() == 2:
+					sprite.position += Vector2(offset[0], offset[1])
+			
+			# Appliquer z_index si présent
+			if prefab.visual_config.has("z_index"):
+				sprite.z_index = prefab.visual_config.z_index
+			
+			result.sprite_node = sprite
+			print("  ✅ Sprite créé (centré sur prefab)")
+	
+	# Créer les éléments (collisions)
+	var instances: Array[ZoneElement] = []
 	for element in prefab.elements:
-		# Créer une copie de l'élément
 		var element_copy = duplicate_element(element)
-		
-		# Ajuster la position
 		element_copy.position += position
-		
 		instances.append(element_copy)
 	
-	return instances
+	result.elements = instances
+	return result
 
 ## Dupliquer un élément (pour éviter de modifier l'original)
 static func duplicate_element(element: ZoneElement) -> ZoneElement:
 	var dict = element.to_dict()
 	return ZoneData._create_element_from_dict(dict)
 
-## Charger et instancier une PrefabInstance
-static func load_and_instantiate(instance: PrefabInstance) -> Array[ZoneElement]:
+## Charger et instancier une PrefabInstance (VERSION AVEC SPRITE)
+static func load_and_instantiate(instance: PrefabInstance) -> Dictionary:
 	var prefab = load_prefab(instance.prefab_id)
 	if prefab == null:
-		return []
+		return {"elements": [], "sprite_node": null}
 	
 	return instantiate_prefab(prefab, instance.position)
 
