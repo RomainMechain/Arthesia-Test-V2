@@ -1,0 +1,364 @@
+{
+  "id": "floor1_zone_lac_reve",
+  "name": "Le Lac du Rêve Verdoyant",
+  "floor_id": 1,
+  "theme_tags": [
+    "village",
+    "lac",
+    "verdure",
+    "légende",
+    "architectes"
+  ],
+  "level_range": [
+    1,
+    5
+  ],
+  "description": "Niché au cœur des Plaines d'Aube, ce paisible village s'organise autour d'un lac scintillant, ses eaux calmes reflétant le ciel doré. Un chemin sinueux borde les rives, connectant les modestes demeures et ateliers. La rumeur d'une ancienne arme des Architectes, engloutie dans les profondeurs du lac, persiste parmi les habitants.",
+  "size": [
+    1500,
+    1000
+  ],
+  "environment": {
+    "ground_type": "grass",
+    "ground_color": "#5A964A",
+    "decor_zones": [
+      {
+        "type": "water",
+        "shape": "circle",
+        "center": [
+          750,
+          500
+        ],
+        "radius": 180,
+        "description": "Le Lac du Rêve, au centre du village"
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          710,
+          0
+        ],
+        "size": [
+          80,
+          280
+        ],
+        "description": "Chemin principal nord"
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          710,
+          720
+        ],
+        "size": [
+          80,
+          280
+        ],
+        "description": "Chemin principal sud"
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          670,
+          280
+        ],
+        "size": [
+          160,
+          80
+        ],
+        "description": "Chemin nord autour du lac"
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          670,
+          640
+        ],
+        "size": [
+          160,
+          80
+        ],
+        "description": "Chemin sud autour du lac"
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          570,
+          360
+        ],
+        "size": [
+          80,
+          280
+        ],
+        "description": "Chemin ouest autour du lac"
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          850,
+          360
+        ],
+        "size": [
+          80,
+          280
+        ],
+        "description": "Chemin est autour du lac"
+      }
+    ]
+  },
+  "spawn_points": {
+    "default": [
+      750,
+      400
+    ],
+    "entrance_north": [
+      750,
+      100
+    ],
+    "entrance_south": [
+      750,
+      900
+    ]
+  },
+  "prefab_instances": [
+    {
+      "prefab_id": "inn",
+      "instance_id": "inn_001",
+      "position": [
+        400,
+        430
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "shop_rune_wood_medium_01",
+      "instance_id": "shop_001",
+      "position": [
+        400,
+        600
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "forge_stone_medium_01",
+      "instance_id": "forge_001",
+      "position": [
+        950,
+        300
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_001",
+      "position": [
+        500,
+        200
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_002",
+      "position": [
+        900,
+        700
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "tree_cluster_001",
+      "position": [
+        100,
+        100
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "tree_cluster_002",
+      "position": [
+        1200,
+        100
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "tree_cluster_003",
+      "position": [
+        100,
+        750
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "tree_cluster_004",
+      "position": [
+        1200,
+        750
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_001",
+      "position": [
+        350,
+        400
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_002",
+      "position": [
+        1000,
+        300
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_003",
+      "position": [
+        350,
+        700
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    }
+  ],
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        0,
+        950
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        1450,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_elder_001",
+      "position": [
+        720,
+        550
+      ],
+      "poi_name": "Ancienne Raconteuse",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Ce lac... il a des secrets plus profonds que ses eaux, Marqués.",
+        "La légende dit qu'une lame des Architectes y repose, attendant un digne héritier. Beaucoup ont cherché, peu sont revenus avec plus que des frissons.",
+        "Les murmures du vent et de l'eau racontent l'histoire d'un temps avant la Fracture, quand ces terres étaient unies et que les Architectes veillaient."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "lore_stone",
+      "id": "lore_stone_lake_001",
+      "position": [
+        800,
+        400
+      ],
+      "poi_name": "Stèle Moussue",
+      "interaction_text": "Examiner",
+      "lore_text": "Une stèle ancienne, recouverte de mousse et de symboles à peine lisibles. 'Ici, les Architectes ont laissé une empreinte, un murmure du passé. L'eau se souvient de la lumière d'avant la Fracture, et de ce qu'elle a englouti.'",
+      "lore_category": "architects"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "chest",
+      "id": "chest_001",
+      "position": [
+        150,
+        150
+      ],
+      "poi_name": "Coffre Discret",
+      "interaction_text": "Ouvrir",
+      "loot_table_id": "basic_chest_lvl1_5"
+    }
+  ]
+}

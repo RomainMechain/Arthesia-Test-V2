@@ -1,0 +1,330 @@
+{
+  "id": "floor1_zone_lac_calme",
+  "name": "Les Rivages du Repos",
+  "floor_id": 1,
+  "theme_tags": [
+    "village",
+    "lake",
+    "pastoral",
+    "architects_ruins",
+    "aube"
+  ],
+  "level_range": [
+    1,
+    5
+  ],
+  "description": "Un paisible village blotti au bord d'un lac scintillant, où l'aurore semble éternelle. Des chemins de terre serpentent entre les maisons simples, menant vers les eaux calmes et les vestiges discrets d'une civilisation oubliée.",
+  "size": [
+    1500,
+    1000
+  ],
+  "environment": {
+    "ground_type": "grass",
+    "ground_color": "#5A964A",
+    "decor_zones": [
+      {
+        "type": "water",
+        "shape": "circle",
+        "center": [
+          1200,
+          500
+        ],
+        "radius": 250,
+        "description": "Le Lac du Repos, source de vie pour le village."
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          470,
+          0
+        ],
+        "size": [
+          80,
+          1000
+        ],
+        "description": "Chemin principal nord-sud traversant le village."
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          550,
+          430
+        ],
+        "size": [
+          60,
+          60
+        ],
+        "description": "Sentier vers la forge."
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          410,
+          330
+        ],
+        "size": [
+          60,
+          60
+        ],
+        "description": "Sentier vers l'auberge."
+      },
+      {
+        "type": "dirt",
+        "shape": "circle",
+        "center": [
+          670,
+          300
+        ],
+        "radius": 30,
+        "description": "Petite zone de terre battue près d'une maison."
+      }
+    ]
+  },
+  "spawn_points": {
+    "default": [
+      510,
+      500
+    ],
+    "entrance_north": [
+      510,
+      80
+    ],
+    "entrance_south": [
+      510,
+      920
+    ]
+  },
+  "prefab_instances": [
+    {
+      "prefab_id": "inn",
+      "instance_id": "inn_repos",
+      "position": [
+        400,
+        300
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "forge",
+      "instance_id": "forge_village",
+      "position": [
+        600,
+        400
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_001",
+      "position": [
+        300,
+        200
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_002",
+      "position": [
+        300,
+        500
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_003",
+      "position": [
+        650,
+        250
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_004",
+      "position": [
+        650,
+        550
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "oak_001",
+      "position": [
+        250,
+        100
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "oak_002",
+      "position": [
+        750,
+        150
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "oak_003",
+      "position": [
+        200,
+        600
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "cluster_001",
+      "position": [
+        800,
+        700
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "cluster_002",
+      "position": [
+        100,
+        750
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    }
+  ],
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        0,
+        950
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        1450,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_elara",
+      "position": [
+        630,
+        460
+      ],
+      "poi_name": "Elara la Forgeronne",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Bienvenue, Marqué. Les murmures de la Tour sont-ils déjà parvenus jusqu'à toi ?",
+        "Il se dit que les Architectes ont laissé des savoirs cachés partout, même dans nos paisibles rivages.",
+        "Mon marteau résonne, mais parfois, j'entends l'écho d'un monde lointain, avant la Fracture..."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "lore_stone",
+      "id": "lore_lac_001",
+      "position": [
+        900,
+        400
+      ],
+      "poi_name": "Pierre des Reflets",
+      "interaction_text": "Examiner",
+      "lore_text": "Cette stèle érodée par le temps se dresse au bord du lac. Ses gravures, à peine visibles, dépeignent des symboles architecturaux complexes et une carte stellaire qui ne correspond à aucun ciel connu. Un fragment de la mémoire d'Arthesia avant la Fracture, figé dans la pierre.",
+      "lore_category": "architects"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_old_fisherman",
+      "position": [
+        1000,
+        700
+      ],
+      "poi_name": "Ancien Pêcheur",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Le lac est calme aujourd'hui. Parfait pour la réflexion.",
+        "J'ai vu des lueurs étranges dans le ciel, parfois. Ça me rappelle les contes de ma grand-mère sur la Fracture.",
+        "Les Architectes... Ils savaient bien des choses que nous avons oubliées."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    }
+  ]
+}

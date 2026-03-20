@@ -52,6 +52,27 @@ def get_json_format():
   "description": "Description immersive de la zone (2-3 phrases).",
   
   "size": [largeur, hauteur],
+
+  "environment": {
+    "ground_type": "grass",
+    "ground_color": "#5A964A",
+    "decor_zones": [
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [400, 0],
+        "size": [80, 1000],
+        "description": "Chemin principal du village"
+      },
+      {
+        "type": "water",
+        "shape": "circle",
+        "center": [1200, 800],
+        "radius": 100,
+        "description": "Petit lac"
+      }
+    ]
+  },
   
   "spawn_points": {
     "default": [x, y],
@@ -139,6 +160,25 @@ def get_generation_rules():
 6. **Format** :
    - Retourne UNIQUEMENT le JSON valide
    - Pas de markdown, pas d'explications, juste le JSON
+
+## ENVIRONNEMENT
+
+1. **Ground Type** :
+   - Choisir selon le thème : grass (village, forêt), stone (ruines, caverne), sand (désert), snow (montagne)
+   - La ground_color doit correspondre au type
+
+2. **Décor Zones** :
+   - **Chemins** : Connecter les zones importantes (spawn points, bâtiments, exits)
+   - **Eau** : Lacs, rivières (utiliser circles ou polygons)
+   - **Zones spéciales** : Zones de sable près de l'eau, zones d'herbe foncée (forêt dense), etc.
+   - Minimum 1-2 zones de décor, maximum 5-6
+   - Les chemins devraient faire ~60-100 pixels de large
+   - Les lacs/rivières : radius 80-150 pixels
+
+3. **Cohérence** :
+   - Le décor doit avoir du sens (pas de lave dans un village paisible)
+   - Les chemins doivent relier logiquement les points d'intérêt
+   - Ne pas couvrir toute la zone (laisser de l'espace)
 """
 
 def build_zone_generation_prompt(zone_description, prefabs_config, zone_size=[1500, 1000], level_range=[1, 5]):

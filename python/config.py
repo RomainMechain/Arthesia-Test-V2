@@ -4,7 +4,7 @@
 # API GEMINI
 # ============================================================================
 
-GEMINI_API_KEY = "key"  
+GEMINI_API_KEY = "zzz"  
 GEMINI_MODEL = "models/gemini-2.5-flash"  # Modèle à utiliser
 
 # ============================================================================
@@ -28,9 +28,9 @@ AVAILABLE_PREFABS = {
             "description": "Petite maison en bois avec une porte"
         },
         {
-            "id": "forge",
-            "name": "Forge",
-            "size": [140, 120],
+            "id": "forge_stone_medium_01",
+            "name": "Petite Forge en Pierre",
+            "size": [120, 100],
             "description": "Forge en pierre avec cheminée"
         },
         {
@@ -38,6 +38,12 @@ AVAILABLE_PREFABS = {
             "name": "Auberge",
             "size": [180, 140],
             "description": "Grande auberge en bois avec enseigne"
+        },
+        {
+            "id": "shop_rune_wood_medium_01",
+            "name": "Boutique de Runes en Bois",
+            "size": [120, 100],
+            "description": "Boutique en bois spécialisée dans les runes magiques"
         }
     ],
     "vegetation": [

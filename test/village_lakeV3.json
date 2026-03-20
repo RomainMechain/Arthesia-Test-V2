@@ -1,0 +1,341 @@
+{
+  "id": "floor1_zone_lac_murmurant",
+  "name": "Le Village du Lac Murmurant",
+  "floor_id": 1,
+  "theme_tags": [
+    "village",
+    "lac",
+    "pastoral",
+    "légende",
+    "architectes"
+  ],
+  "level_range": [
+    1,
+    5
+  ],
+  "description": "Niché au cœur des Plaines d'Aube, ce paisible village s'étend le long des rives d'un lac scintillant, où les rumeurs d'une arme légendaire perdue résonnent encore. Des chemins sinueux relient les humbles demeures et commerces, invitant les Marqués à la découverte et au repos avant de poursuivre leur ascension.",
+  "size": [
+    1500,
+    1000
+  ],
+  "environment": {
+    "ground_type": "grass",
+    "ground_color": "#5A964A",
+    "decor_zones": [
+      {
+        "type": "water",
+        "shape": "circle",
+        "center": [
+          750,
+          500
+        ],
+        "radius": 200,
+        "description": "Grand lac central du village"
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          200,
+          0
+        ],
+        "size": [
+          80,
+          1000
+        ],
+        "description": "Chemin principal nord-sud du village"
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          280,
+          420
+        ],
+        "size": [
+          80,
+          100
+        ],
+        "description": "Chemin vers l'auberge"
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          280,
+          320
+        ],
+        "size": [
+          80,
+          80
+        ],
+        "description": "Chemin vers la forge"
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          280,
+          570
+        ],
+        "size": [
+          80,
+          80
+        ],
+        "description": "Chemin vers la boutique de runes"
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          450,
+          300
+        ],
+        "size": [
+          100,
+          400
+        ],
+        "description": "Chemin longeant la rive ouest du lac"
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          850,
+          300
+        ],
+        "size": [
+          100,
+          400
+        ],
+        "description": "Chemin longeant la rive est du lac"
+      }
+    ]
+  },
+  "spawn_points": {
+    "default": [
+      240,
+      450
+    ],
+    "entrance_north": [
+      750,
+      100
+    ],
+    "entrance_south": [
+      750,
+      900
+    ]
+  },
+  "prefab_instances": [
+    {
+      "prefab_id": "inn",
+      "instance_id": "inn_001",
+      "position": [
+        360,
+        400
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "forge_stone_medium_01",
+      "instance_id": "forge_001",
+      "position": [
+        360,
+        280
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "shop_rune_wood_medium_01",
+      "instance_id": "shop_001",
+      "position": [
+        360,
+        550
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_001",
+      "position": [
+        100,
+        200
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_002",
+      "position": [
+        100,
+        650
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "trees_north_east",
+      "position": [
+        1000,
+        100
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "trees_south_east",
+      "position": [
+        1000,
+        800
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "oak_001",
+      "position": [
+        600,
+        150
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "oak_002",
+      "position": [
+        950,
+        250
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "oak_003",
+      "position": [
+        980,
+        700
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "oak_004",
+      "position": [
+        50,
+        50
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    }
+  ],
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        0,
+        950
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        1450,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_pecheur_ancien",
+      "position": [
+        500,
+        480
+      ],
+      "poi_name": "Pêcheur Ancien",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Ah, un nouveau Marqué ! Ce lac a bien des histoires à raconter, et certaines sont plus profondes que l'eau elle-même...",
+        "On dit qu'une relique des Architectes, une arme d'une puissance incroyable, repose au fond. Mais personne n'a osé braver ses mystères.",
+        "Les anciens murmurent que seuls ceux qui portent la Marque peuvent réellement la chercher. Peut-être que vous, jeune âme, êtes celui qu'elle attend."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "lore_stone",
+      "id": "lore_stele_submergee",
+      "position": [
+        880,
+        600
+      ],
+      "poi_name": "Stèle Submergée",
+      "interaction_text": "Examiner",
+      "lore_text": "Une stèle partiellement immergée, couverte de symboles architectes effacés par le temps et l'eau. Un fragment de texte est encore lisible : '...la Fracture a englouti plus que des terres, elle a dissimulé la Lame d'Arthesia, gardienne des abysses dimensionnels.'",
+      "lore_category": "architects"
+    }
+  ]
+}

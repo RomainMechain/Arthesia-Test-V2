@@ -54,6 +54,13 @@ class_name ZoneData
 @export var elements: Array[ZoneElement] = []
 
 # =============================================================================
+# ENVIRONNEMENT VISUEL
+# =============================================================================
+
+## Configuration de l'environnement (sol, décor, etc.)
+@export var environment: EnvironmentConfig = null
+
+# =============================================================================
 # MÉTHODES
 # =============================================================================
 
@@ -67,6 +74,7 @@ func to_dict() -> Dictionary:
 		"description": description,
 		"size": [size.x, size.y],
 		"spawn_points": _spawn_points_to_dict(),
+		"environment": environment.to_dict() if environment else {},
 		"prefab_instances": prefab_instances.map(func(p): return p.to_dict()),
 		"elements": elements.map(func(e): return e.to_dict())
 	}
@@ -92,6 +100,10 @@ static func from_dict(data: Dictionary) -> ZoneData:
 	for spawn_name in spawn_data:
 		var pos_array = spawn_data[spawn_name]
 		zone.spawn_points[spawn_name] = Vector2(pos_array[0], pos_array[1])
+
+	# Charger l'environnement
+	if data.has("environment") and not data.environment.is_empty():
+		zone.environment = EnvironmentConfig.from_dict(data.environment)
 	
 	# Si aucun spawn point défini, créer un "default"
 	if zone.spawn_points.is_empty():

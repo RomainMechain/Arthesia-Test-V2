@@ -1,0 +1,324 @@
+{
+  "id": "floor1_zone_champs_argent",
+  "name": "Les Champs d'Argent",
+  "floor_id": 1,
+  "theme_tags": [
+    "pastoral",
+    "plains",
+    "village",
+    "mystery",
+    "legend",
+    "architects"
+  ],
+  "level_range": [
+    1,
+    5
+  ],
+  "description": "Les vastes Champs d'Argent s'étirent à perte sous la lumière douce de l'aube éternelle, abritant de petits hameaux paisibles et des fragments de ruines anciennes. Une légende chuchote qu'à chaque pleine lune, une entité éthérée émerge des brumes de la plaine, gardienne d'un secret lié aux Architectes et à la Fracture.",
+  "size": [
+    4500,
+    3000
+  ],
+  "environment": {
+    "ground_type": "grass",
+    "ground_color": "#5A964A",
+    "decor_zones": [
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          2150,
+          0
+        ],
+        "size": [
+          100,
+          3000
+        ],
+        "description": "Chemin principal nord-sud"
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          1600,
+          1450
+        ],
+        "size": [
+          550,
+          80
+        ],
+        "description": "Chemin vers le hameau"
+      },
+      {
+        "type": "water",
+        "shape": "circle",
+        "center": [
+          3500,
+          700
+        ],
+        "radius": 120,
+        "description": "Petit étang paisible"
+      },
+      {
+        "type": "grass_dark",
+        "shape": "circle",
+        "center": [
+          3850,
+          2250
+        ],
+        "radius": 180,
+        "description": "Clairière mystérieuse où la légende dit que la bête apparaît."
+      }
+    ]
+  },
+  "spawn_points": {
+    "default": [
+      2250,
+      1500
+    ],
+    "entrance_north": [
+      2200,
+      100
+    ],
+    "entrance_south": [
+      2200,
+      2900
+    ],
+    "entrance_west": [
+      100,
+      1500
+    ],
+    "entrance_east": [
+      4400,
+      1500
+    ]
+  },
+  "prefab_instances": [
+    {
+      "prefab_id": "inn",
+      "instance_id": "inn_hameau_01",
+      "position": [
+        1700,
+        1500
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_hameau_01",
+      "position": [
+        1480,
+        1620
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_hameau_02",
+      "position": [
+        1900,
+        1620
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "forge_stone_medium_01",
+      "instance_id": "forge_hameau_01",
+      "position": [
+        1600,
+        1320
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "shop_rune_wood_medium_01",
+      "instance_id": "shop_hameau_01",
+      "position": [
+        1850,
+        1320
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "trees_forest_01",
+      "position": [
+        1000,
+        800
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "trees_forest_02",
+      "position": [
+        3700,
+        1000
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_plain_01",
+      "position": [
+        800,
+        2000
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_plain_02",
+      "position": [
+        2500,
+        500
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_plain_03",
+      "position": [
+        4000,
+        2600
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "trees_mystery_01",
+      "position": [
+        3750,
+        2150
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    }
+  ],
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        4500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        0,
+        2950
+      ],
+      "size": [
+        4500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        50,
+        3000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        4450,
+        0
+      ],
+      "size": [
+        50,
+        3000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_innkeeper_elara",
+      "position": [
+        1780,
+        1580
+      ],
+      "poi_name": "Elara, l'Aubergiste",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Bienvenue aux Champs d'Argent, voyageur. Repose-toi avant de poursuivre ton chemin vers le haut de la Tour.",
+        "On dit que les Architectes ont laissé des marques partout, même dans les légendes les plus sombres de notre plaine."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "lore_stone",
+      "id": "lore_stone_lunaire",
+      "position": [
+        3850,
+        2250
+      ],
+      "poi_name": "Autel Lunaire Ancien",
+      "interaction_text": "Examiner",
+      "lore_text": "Une pierre brute, taillée de symboles inconnus. Elle semble vibrer faiblement sous le toucher. Des fragments de récits anciens évoquent des rituels des Architectes liés aux cycles lunaires, et une entité protectrice ou punitive invoquée lors des pleines lunes. Est-ce là l'origine de la bête des légendes?",
+      "lore_category": "architects"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_chasseur_silas",
+      "position": [
+        3700,
+        2300
+      ],
+      "poi_name": "Silas, le Chasseur Solitaire",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Tu t'aventures près de la Clairière de l'Éclipse? Prudence, jeune Marcqué. Quand la lune est pleine, cette terre ne pardonne pas.",
+        "J'ai vu des ombres se mouvoir ici, des formes que la Fracture a peut-être libérées. Ce n'est pas une simple bête, c'est... autre chose."
+      ],
+      "quest_id": "",
+      "npc_type": "hunter"
+    }
+  ]
+}

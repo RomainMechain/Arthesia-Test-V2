@@ -10,6 +10,12 @@
     0,
     0
   ],
+  "visual_config": {
+    "render_type": "sprite",
+    "sprite_path": "res://assets/buildings/shop_rune_wood_medium_01.png",
+    "sprite_offset": [0, 0],
+    "z_index": 10
+  },
   "elements": [
     {
       "element_type": "wall",

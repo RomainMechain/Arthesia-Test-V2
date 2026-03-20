@@ -1,0 +1,318 @@
+{
+  "id": "floor1_zone_lac_scintillant",
+  "name": "Lac Scintillant du Repos",
+  "floor_id": 1,
+  "theme_tags": [
+    "village",
+    "lake",
+    "pastoral",
+    "mystery",
+    "architects"
+  ],
+  "level_range": [
+    1,
+    5
+  ],
+  "description": "Un paisible village blotti autour d'un lac scintillant, où l'écho des rires des villageois se mêle au murmure d'une ancienne légende. On raconte qu'une arme d'Architecte repose en ses profondeurs, attendant d'être découverte.",
+  "size": [
+    1500,
+    1000
+  ],
+  "environment": {
+    "ground_type": "grass",
+    "ground_color": "#5A964A",
+    "decor_zones": [
+      {
+        "type": "water",
+        "shape": "circle",
+        "center": [
+          400,
+          500
+        ],
+        "radius": 150,
+        "description": "Le lac central du village, source de légendes."
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          710,
+          0
+        ],
+        "size": [
+          80,
+          1000
+        ],
+        "description": "Chemin principal nord-sud traversant le village."
+      },
+      {
+        "type": "dirt_path",
+        "shape": "rect",
+        "position": [
+          550,
+          480
+        ],
+        "size": [
+          160,
+          40
+        ],
+        "description": "Sentier menant au bord du lac."
+      },
+      {
+        "type": "grass_dark",
+        "shape": "rect",
+        "position": [
+          100,
+          80
+        ],
+        "size": [
+          250,
+          200
+        ],
+        "description": "Zone d'herbe plus dense et d'ombre."
+      }
+    ]
+  },
+  "spawn_points": {
+    "default": [
+      750,
+      100
+    ],
+    "entrance_north": [
+      750,
+      50
+    ],
+    "entrance_south": [
+      750,
+      950
+    ]
+  },
+  "prefab_instances": [
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_001",
+      "position": [
+        850,
+        150
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "house_simple",
+      "instance_id": "house_002",
+      "position": [
+        600,
+        200
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "forge_stone_medium_01",
+      "instance_id": "forge_001",
+      "position": [
+        850,
+        300
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "inn",
+      "instance_id": "inn_001",
+      "position": [
+        600,
+        700
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "shop_rune_wood_medium_01",
+      "instance_id": "shop_rune_001",
+      "position": [
+        850,
+        750
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "trees_001",
+      "position": [
+        100,
+        50
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_cluster_5",
+      "instance_id": "trees_002",
+      "position": [
+        1100,
+        800
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_001",
+      "position": [
+        500,
+        100
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_002",
+      "position": [
+        950,
+        200
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_003",
+      "position": [
+        300,
+        800
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    },
+    {
+      "prefab_id": "tree_oak",
+      "instance_id": "tree_oak_004",
+      "position": [
+        1200,
+        500
+      ],
+      "rotation": 0,
+      "scale": 1.0,
+      "overrides": {}
+    }
+  ],
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        0,
+        950
+      ],
+      "size": [
+        1500,
+        50
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        1450,
+        0
+      ],
+      "size": [
+        50,
+        1000
+      ],
+      "wall_type": "stone",
+      "color": "#808080"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_pecheur_ancien",
+      "position": [
+        400,
+        680
+      ],
+      "poi_name": "Pêcheur Ancien",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Le Lac Scintillant garde bien des secrets, jeune Marqué. On dit qu'une relique des Architectes y sommeille, mais bien des pêcheurs s'y sont aventurés en vain.",
+        "Mon grand-père racontait que lors de la Fracture, des fragments d'artefacts sont tombés du ciel, et certains disent que l'un d'eux a percé le fond du lac..."
+      ],
+      "quest_id": "",
+      "npc_type": "villager"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "lore_stone",
+      "id": "lore_stele_submergee",
+      "position": [
+        350,
+        400
+      ],
+      "poi_name": "Stèle Submergée",
+      "interaction_text": "Examiner",
+      "lore_text": "Une stèle en pierre recouverte d'algues, ses gravures sont presque effacées. Seule une forme étrange, rappelant un ancien symbole d'énergie des Architectes, est encore lisible. Elle semble pointer vers les profondeurs du lac, où l'eau est la plus sombre.",
+      "lore_category": "architects"
+    },
+    {
+      "element_type": "poi",
+      "poi_type": "npc",
+      "id": "npc_marchand_curieux",
+      "position": [
+        870,
+        700
+      ],
+      "poi_name": "Marchand Curieux",
+      "interaction_text": "Parler",
+      "dialogues": [
+        "Les rumeurs sur le lac attirent des aventuriers de tout étage. J'espère que vous trouverez votre bonheur, mais n'oubliez pas de passer à la boutique !",
+        "On dit que les Architectes avaient un don pour cacher leurs trésors. Si quelque chose est dans le lac, ça ne sera pas facile à trouver !"
+      ],
+      "quest_id": "",
+      "npc_type": "merchant"
+    }
+  ]
+}
