@@ -1,10 +1,29 @@
 # Configuration du générateur de zones
 
+# =============================================================================
+# API PROVIDER SELECTION
+# =============================================================================
+
+USE_CLAUDE = False  # True = Claude, False = Gemini
+
+# =============================================================================
+# CLAUDE API CONFIGURATION
+# =============================================================================
+
+CLAUDE_API_KEY = ""  # ← REMPLACE par ta clé API
+CLAUDE_MODEL = "claude-sonnet-4-6"  # Modèle recommandé
+
+# Alternative models:
+# "claude-3-opus-20240229"  # Plus puissant mais plus cher
+# "claude-3-5-haiku-20241022"  # Plus rapide et moins cher
+
+CLAUDE_MAX_TOKENS = 8192  # Output tokens max
+
 # ============================================================================
 # API GEMINI
 # ============================================================================
 
-GEMINI_API_KEY = "zzz"  
+GEMINI_API_KEY = ""  
 GEMINI_MODEL = "models/gemini-2.5-flash"  # Modèle à utiliser
 
 # ============================================================================

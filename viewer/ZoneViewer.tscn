@@ -4,7 +4,7 @@
 
 [node name="ZoneViewer" type="Node2D"]
 script = ExtResource("1_xnpw5")
-zone_json_path = "res://test/plaineV1.json"
+zone_json_path = "res://test/test_claude4.json"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false

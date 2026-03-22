@@ -6,11 +6,16 @@ Usage: py -3.12 generate_zone.py --prompt "village paisible" --output zone_001.j
 import json
 import argparse
 from pathlib import Path
-from google import genai
 
 # Import des configs et prompts
 import config
 import prompts
+
+# Imports conditionnels selon le provider
+if hasattr(config, 'USE_CLAUDE') and config.USE_CLAUDE:
+    from anthropic import Anthropic
+else:
+    from google import genai
 
 # ============================================================================
 # GÉNÉRATEUR
@@ -19,11 +24,18 @@ import prompts
 class ZoneGenerator:
     def __init__(self):
         """Initialise le générateur"""
-        self.client = genai.Client(api_key=config.GEMINI_API_KEY)
-        self.model = config.GEMINI_MODEL
+        self.use_claude = getattr(config, 'USE_CLAUDE', False)
         
-        print("✅ Générateur de zones initialisé")
-        print(f"   Modèle : {self.model}")
+        if self.use_claude:
+            self.client = Anthropic(api_key=config.CLAUDE_API_KEY)
+            self.model = config.CLAUDE_MODEL
+            print("✅ Générateur de zones initialisé (Claude)")
+            print(f"   Modèle : {self.model}")
+        else:
+            self.client = genai.Client(api_key=config.GEMINI_API_KEY)
+            self.model = config.GEMINI_MODEL
+            print("✅ Générateur de zones initialisé (Gemini)")
+            print(f"   Modèle : {self.model}")
     
     def generate_zone(self, zone_description, zone_size=[1500, 1000], level_range=[1, 5]):
         """Génère une zone via l'IA"""
@@ -44,23 +56,35 @@ class ZoneGenerator:
             level_range
         )
         
-        print("📤 Envoi du prompt à Gemini...")
+        print("📤 Envoi du prompt à l'IA...")
         
         try:
-            # Appel à l'API
-            response = self.client.models.generate_content(
-                model=self.model,
-                contents=prompt,
-                config={
-                    'max_output_tokens': config.MAX_OUTPUT_TOKENS,
-                    'temperature': 0.8,  # Créativité
-                }
-            )
+            if self.use_claude:
+                # Appel à Claude
+                response = self.client.messages.create(
+                    model=self.model,
+                    max_tokens=config.CLAUDE_MAX_TOKENS,
+                    messages=[
+                        {"role": "user", "content": prompt}
+                    ]
+                )
+                
+                zone_json_text = response.content[0].text.strip()
+                
+            else:
+                # Appel à Gemini (code existant)
+                response = self.client.models.generate_content(
+                    model=self.model,
+                    contents=prompt,
+                    config={
+                        'max_output_tokens': config.MAX_OUTPUT_TOKENS,
+                        'temperature': 0.8,
+                    }
+                )
+                
+                zone_json_text = response.text.strip()
             
             print("✅ Réponse reçue !")
-            
-            # Récupérer le texte
-            zone_json_text = response.text.strip()
             
             # Nettoyer si besoin (enlever les ```json si présents)
             if zone_json_text.startswith("```json"):
