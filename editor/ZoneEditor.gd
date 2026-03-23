@@ -38,6 +38,7 @@ var drag_offset: Vector2 = Vector2.ZERO
 
 # Modifications
 var has_modifications: bool = false
+var modified_elements: Array[Node2D] = [] 
 
 # Contrôles caméra
 var is_panning: bool = false
@@ -124,7 +125,12 @@ func _input(event):
 			# Fin du clic (relâcher)
 			if is_dragging:
 				is_dragging = false
-				print("📍 Élément déplacé")
+				
+				# Marquer l'élément comme modifié
+				if selected_element and not modified_elements.has(selected_element):
+					modified_elements.append(selected_element)
+				
+				print("📍 Élément déplacé : %s" % get_element_name(selected_element))
 				has_modifications = true
 				get_viewport().set_input_as_handled()
 	
@@ -199,17 +205,25 @@ func display_zone():
 	
 	# Afficher les sprites des prefabs
 	if zone.has_meta("sprite_nodes"):
-		var prefab_index = 0
-		for sprite in zone.get_meta("sprite_nodes"):
+		var sprites = zone.get_meta("sprite_nodes")
+		
+		# Créer un mapping instance_id → prefab_instance
+		var prefabs_map = {}
+		for prefab_inst in zone.prefab_instances:
+			prefabs_map[prefab_inst.instance_id] = prefab_inst
+		
+		for sprite in sprites:
 			draw_area.add_child(sprite)
 			selectable_elements.append(sprite)
 			
-			# Associer les données du prefab au sprite
-			if prefab_index < zone.prefab_instances.size():
-				var prefab_instance = zone.prefab_instances[prefab_index]
-				sprite.set_meta("prefab_instance", prefab_instance)
+			# Associer par instance_id
+			var instance_id = sprite.get_meta("instance_id", "")
+			if prefabs_map.has(instance_id):
+				sprite.set_meta("prefab_instance", prefabs_map[instance_id])
 				sprite.set_meta("element_type", "prefab")
-				prefab_index += 1
+				print("🎨 Sprite %s associé à %s" % [instance_id, prefabs_map[instance_id].prefab_id])
+			else:
+				push_warning("⚠️ Sprite sans instance_id valide")
 
 # =============================================================================
 # DESSIN (Copié de ZoneViewer)
@@ -486,51 +500,85 @@ func _on_save_pressed():
 	"""Sauvegarde les modifications dans le JSON"""
 	
 	print("\n💾 SAUVEGARDE DE LA ZONE")
-	print("==================================================")
+	print("==============================")
 	
-	if not has_modifications:
+	if not has_modifications or modified_elements.size() == 0:
 		print("ℹ️  Aucune modification à sauvegarder")
-		print("==================================================")
+		print("==============================")
 		return
 	
-	# Mettre à jour les positions dans zone.elements (POIs)
-	for element_node in selectable_elements:
+	print("📝 Éléments modifiés : %d" % modified_elements.size())
+	
+	# Charger le JSON original
+	var file_read = FileAccess.open(zone_file_path, FileAccess.READ)
+	if not file_read:
+		push_error("❌ Impossible de lire le fichier : %s" % zone_file_path)
+		return
+	
+	var json_text = file_read.get_as_text()
+	file_read.close()
+	
+	var json = JSON.new()
+	var parse_result = json.parse(json_text)
+	
+	if parse_result != OK:
+		push_error("❌ Erreur de parsing JSON")
+		return
+	
+	var zone_data: Dictionary = json.data
+	
+	# Mettre à jour UNIQUEMENT les éléments modifiés
+	for element_node in modified_elements:
 		if element_node.has_meta("element_type"):
 			var elem_type = element_node.get_meta("element_type")
 			
 			# POIs
 			if elem_type == "poi" and element_node.has_meta("poi_data"):
 				var poi: POIElement = element_node.get_meta("poi_data")
-				poi.position = element_node.position
-				print("  ✅ POI mis à jour : %s → %s" % [poi.poi_name, poi.position])
+				var poi_id = poi.id
+				
+				# Trouver le POI dans le JSON
+				for i in range(zone_data["elements"].size()):
+					var elem = zone_data["elements"][i]
+					if elem.get("id") == poi_id and elem.get("element_type") == "poi":
+						elem["position"] = [element_node.position.x, element_node.position.y]
+						print("  ✅ POI mis à jour : %s → (%.0f, %.0f)" % [poi.poi_name, element_node.position.x, element_node.position.y])
+						break
 			
 			# Prefabs
 			elif elem_type == "prefab" and element_node.has_meta("prefab_instance"):
 				var prefab_inst: PrefabInstance = element_node.get_meta("prefab_instance")
-				prefab_inst.position = element_node.position
-				print("  ✅ Prefab mis à jour : %s → %s" % [prefab_inst.prefab_id, prefab_inst.position])
+				var instance_id = prefab_inst.instance_id
+				
+				# Trouver le prefab dans le JSON
+				for i in range(zone_data["prefab_instances"].size()):
+					var inst = zone_data["prefab_instances"][i]
+					if inst.get("instance_id") == instance_id:
+						inst["position"] = [element_node.position.x, element_node.position.y]
+						print("  ✅ Prefab mis à jour : %s → (%.0f, %.0f)" % [prefab_inst.prefab_id, element_node.position.x, element_node.position.y])
+						break
 	
-	# Sauvegarder le JSON
-	var zone_dict = zone.to_dict()
-	
-	var file = FileAccess.open(zone_file_path, FileAccess.WRITE)
-	if file:
-		var json_text = JSON.stringify(zone_dict, "  ")  # Indentation de 2 espaces
-		file.store_string(json_text)
-		file.close()
+	# Sauvegarder
+	var file_write = FileAccess.open(zone_file_path, FileAccess.WRITE)
+	if file_write:
+		var json_output = JSON.stringify(zone_data, "  ")
+		file_write.store_string(json_output)
+		file_write.close()
 		
 		print("\n💾 ✅ Zone sauvegardée : %s" % zone_file_path)
-		print("==================================================")
+		print("==============================")
 		
 		has_modifications = false
+		modified_elements.clear()  # Vider la liste
 	else:
 		push_error("❌ Impossible d'ouvrir le fichier pour écriture : %s" % zone_file_path)
-		print("==================================================")
+		print("==============================")
 
 func _on_cancel_pressed():
 	"""Annule et recharge la zone"""
 	print("🔄 Annulation des modifications...")
 	load_and_display_zone()
 	has_modifications = false
+	modified_elements.clear()
 	selected_element = null
 	update_selection_label()

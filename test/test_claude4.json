@@ -1,618 +1,674 @@
 {
+  "description": "Valclair s'étire paisiblement sur les rives dorées du Lac d'Aube, ses maisons en bois reflétant les teintes ambrées d'un ciel qui ne connaît jamais la nuit. Les villageois vaquent à leurs occupations sous le regard silencieux de ruines architectes à demi-enfouies dans les roseaux, témoins muets d'un âge révolu.",
+  "elements": [
+    {
+      "color": "#7A6A50",
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "size": [
+        3000.0,
+        50.0
+      ],
+      "wall_type": "stone"
+    },
+    {
+      "color": "#7A6A50",
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        0.0,
+        1950.0
+      ],
+      "size": [
+        3000.0,
+        50.0
+      ],
+      "wall_type": "stone"
+    },
+    {
+      "color": "#7A6A50",
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "size": [
+        50.0,
+        2000.0
+      ],
+      "wall_type": "stone"
+    },
+    {
+      "color": "#7A6A50",
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        2950.0,
+        0.0
+      ],
+      "size": [
+        50.0,
+        2000.0
+      ],
+      "wall_type": "stone"
+    },
+    {
+      "dialogues": [
+        "Bienvenue à Valclair, Marqué ! Votre arrivée était attendue... enfin, d'une certaine façon. Le lac murmure des choses étranges depuis quelques nuits.",
+        "On raconte que les Architectes ont creusé les fondations de ce village bien avant la Fracture. Les pierres sous nos pieds sont plus vieilles que notre mémoire.",
+        "Si vous cherchez du travail ou des réponses, essayez la vieille forge à l'est. Maelis y passe ses journées à scruter les runes sur ses outils hérités."
+      ],
+      "element_type": "poi",
+      "id": "npc_001",
+      "interaction_text": "Parler",
+      "npc_type": "innkeeper",
+      "poi_name": "Aldric, Aubergiste de Valclair",
+      "poi_type": "npc",
+      "position": [
+        870.0,
+        990.0
+      ],
+      "quest_id": ""
+    },
+    {
+      "dialogues": [
+        "Ces outils... regardez ces gravures. Ce ne sont pas de simples ornements. J'ai mis des années avant de comprendre qu'il s'agissait d'une langue. La langue des Architectes.",
+        "Depuis la Fracture, les métaux de cet étage ont changé. Ils résonnent différemment sous le marteau, comme s'ils gardaient encore une mémoire de ce qu'était le monde entier.",
+        "Vous portez une Marque, je le vois. Soyez prudent avec ce que vous éveillez dans les ruines près du lac. Certaines choses préfèrent rester endormies."
+      ],
+      "element_type": "poi",
+      "id": "npc_002",
+      "interaction_text": "Parler",
+      "npc_type": "blacksmith",
+      "poi_name": "Maelis, Forgeronne des Runes",
+      "poi_type": "npc",
+      "position": [
+        1905.5517578125,
+        900.030578613281
+      ],
+      "quest_id": ""
+    },
+    {
+      "dialogues": [
+        "Les runes que je vends ne sont pas de simples décorations — elles captent l'énergie résiduelle des Architectes qui imprègne encore l'air de cet étage.",
+        "Un Marqué comme vous devrait s'équiper convenablement avant de monter plus haut dans la Tour. Ce que vous trouverez au-dessus est bien plus exigeant que nos paisibles plaines."
+      ],
+      "element_type": "poi",
+      "id": "npc_003",
+      "interaction_text": "Parler",
+      "npc_type": "merchant",
+      "poi_name": "Sylvaine, Marchande de Runes",
+      "poi_type": "npc",
+      "position": [
+        1702.16296386719,
+        1059.07983398438
+      ],
+      "quest_id": ""
+    },
+    {
+      "dialogues": [
+        "Je vis ici depuis soixante ans et jamais le ciel n'a changé. Toujours cette lumière dorée. Au début ça rassure... puis ça devient troublant.",
+        "Ma grand-mère disait que l'aurore éternelle est un don des Architectes — qu'ils ont figé l'aube pour préserver quelque chose d'important dans la lumière du matin."
+      ],
+      "element_type": "poi",
+      "id": "npc_004",
+      "interaction_text": "Parler",
+      "npc_type": "villager",
+      "poi_name": "Vieille Hortense",
+      "poi_type": "npc",
+      "position": [
+        350.0,
+        990.0
+      ],
+      "quest_id": ""
+    },
+    {
+      "dialogues": [
+        "Le Lac d'Aube n'a pas de fond mesurable. J'ai essayé avec cent mètres de corde... rien. Et parfois, la nuit qu'on n'a jamais, je jure voir des lumières bleues monter des profondeurs.",
+        "Les poissons ici ont des écailles qui brillent légèrement. Pas dangereux, juste... différent. Comme si le lac gardait un peu de magie architecte dans ses eaux."
+      ],
+      "element_type": "poi",
+      "id": "npc_005",
+      "interaction_text": "Parler",
+      "npc_type": "villager",
+      "poi_name": "Torven, Pêcheur du Lac",
+      "poi_type": "npc",
+      "position": [
+        1250.0,
+        990.0
+      ],
+      "quest_id": ""
+    },
+    {
+      "element_type": "poi",
+      "id": "lore_001",
+      "interaction_text": "Examiner",
+      "lore_category": "architects",
+      "lore_text": "Les glyphes gravés dans cette pierre résistent à l'érosion du temps. On peut y lire, pour qui sait décoder la langue des Architectes : « Ici fut posée la première Pierre d'Ancrage du Niveau Inférieur. Que les eaux du Lac d'Aube gardent mémoire de ce qui fut construit, afin que ceux qui montent retrouvent ce qui fut perdu lors de la Fracture. » Une flèche stylisée pointe vers le ciel.",
+      "poi_name": "Stèle des Architectes",
+      "poi_type": "lore_stone",
+      "position": [
+        2150.0,
+        1300.0
+      ]
+    },
+    {
+      "element_type": "poi",
+      "id": "lore_002",
+      "interaction_text": "Examiner",
+      "lore_category": "fracture",
+      "lore_text": "Ce bloc de pierre à demi-sorti des eaux du lac porte des inscriptions partiellement effacées par les siècles. Les fragments lisibles évoquent 'la séparation des plans', 'le sacrifice consenti' et 'la Tour comme dernier lien entre les éclats du monde'. Quelqu'un a récemment tracé une Marque à la craie sur la pierre — identique à celle que vous portez.",
+      "poi_name": "Ruines Immergées - Fragment Émergé",
+      "poi_type": "lore_stone",
+      "position": [
+        2700.0,
+        1500.0
+      ]
+    },
+    {
+      "element_type": "poi",
+      "id": "lore_003",
+      "interaction_text": "Examiner",
+      "lore_category": "architects",
+      "lore_text": "Cette borne de pierre polie dépasse à peine du sol herbeux, mais sa base plonge profondément dans la terre. Elle indique une direction vers le nord avec un symbole complexe — une spirale montante entourée de sept points. Les villageois l'ont toujours appelée 'la borne qui montre le chemin', sans savoir qu'elle fut placée par les Architectes pour guider les Marqués vers la Tour.",
+      "poi_name": "Borne de Chemin Antique",
+      "poi_type": "lore_stone",
+      "position": [
+        960.0,
+        350.0
+      ]
+    }
+  ],
+  "environment": {
+    "decor_zones": [
+      {
+        "center": [
+          2400.0,
+          1400.0
+        ],
+        "description": "Le Lac d'Aube, étendue paisible aux reflets dorés",
+        "radius": 420.0,
+        "shape": "circle",
+        "type": "water"
+      },
+      {
+        "description": "Plage de sable fin longeant la rive ouest du lac",
+        "position": [
+          1900.0,
+          1150.0
+        ],
+        "shape": "rect",
+        "size": [
+          600.0,
+          120.0
+        ],
+        "type": "sand"
+      },
+      {
+        "description": "Chemin principal est-ouest traversant le village",
+        "position": [
+          0.0,
+          950.0
+        ],
+        "shape": "rect",
+        "size": [
+          1950.0,
+          80.0
+        ],
+        "type": "dirt_path"
+      },
+      {
+        "description": "Chemin nord menant à l'entrée nord du village",
+        "position": [
+          920.0,
+          0.0
+        ],
+        "shape": "rect",
+        "size": [
+          80.0,
+          950.0
+        ],
+        "type": "dirt_path"
+      },
+      {
+        "description": "Chemin sud menant à la sortie sud",
+        "position": [
+          920.0,
+          1030.0
+        ],
+        "shape": "rect",
+        "size": [
+          80.0,
+          970.0
+        ],
+        "type": "dirt_path"
+      },
+      {
+        "description": "Chemin secondaire vers la rive du lac",
+        "position": [
+          1950.0,
+          870.0
+        ],
+        "shape": "rect",
+        "size": [
+          80.0,
+          160.0
+        ],
+        "type": "dirt_path"
+      }
+    ],
+    "ground_color": "#5A964A",
+    "ground_type": "grass"
+  },
+  "floor_id": 1.0,
   "id": "floor1_zone_001",
+  "level_range": [
+    1.0,
+    5.0
+  ],
   "name": "Valclair, Village du Lac d'Aube",
-  "floor_id": 1,
+  "prefab_instances": [
+    {
+      "instance_id": "inn_001",
+      "overrides": {
+
+      },
+      "position": [
+        700.0,
+        860.0
+      ],
+      "prefab_id": "inn",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_001",
+      "overrides": {
+
+      },
+      "position": [
+        300.0,
+        700.0
+      ],
+      "prefab_id": "house_simple",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_002",
+      "overrides": {
+
+      },
+      "position": [
+        480.0,
+        700.0
+      ],
+      "prefab_id": "house_simple",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_003",
+      "overrides": {
+
+      },
+      "position": [
+        300.0,
+        1100.0
+      ],
+      "prefab_id": "house_simple",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_004",
+      "overrides": {
+
+      },
+      "position": [
+        480.0,
+        1100.0
+      ],
+      "prefab_id": "house_simple",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_005",
+      "overrides": {
+
+      },
+      "position": [
+        1150.0,
+        700.0
+      ],
+      "prefab_id": "house_simple",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_006",
+      "overrides": {
+
+      },
+      "position": [
+        1330.0,
+        700.0
+      ],
+      "prefab_id": "house_simple",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_007",
+      "overrides": {
+
+      },
+      "position": [
+        1150.0,
+        1100.0
+      ],
+      "prefab_id": "house_simple",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_008",
+      "overrides": {
+
+      },
+      "position": [
+        1330.0,
+        1100.0
+      ],
+      "prefab_id": "house_simple",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_009",
+      "overrides": {
+
+      },
+      "position": [
+        1550.0,
+        700.0
+      ],
+      "prefab_id": "house_simple",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_010",
+      "overrides": {
+
+      },
+      "position": [
+        1550.0,
+        1100.0
+      ],
+      "prefab_id": "house_simple",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "forge_001",
+      "overrides": {
+
+      },
+      "position": [
+        1993.44189453125,
+        804.619018554688
+      ],
+      "prefab_id": "forge_stone_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "shop_001",
+      "overrides": {
+
+      },
+      "position": [
+        1810.0,
+        1202.40747070313
+      ],
+      "prefab_id": "shop_rune_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_001",
+      "overrides": {
+
+      },
+      "position": [
+        150.0,
+        200.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_002",
+      "overrides": {
+
+      },
+      "position": [
+        400.0,
+        200.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_003",
+      "overrides": {
+
+      },
+      "position": [
+        650.0,
+        200.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_004",
+      "overrides": {
+
+      },
+      "position": [
+        150.0,
+        1600.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_005",
+      "overrides": {
+
+      },
+      "position": [
+        400.0,
+        1700.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_006",
+      "overrides": {
+
+      },
+      "position": [
+        700.0,
+        1650.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_007",
+      "overrides": {
+
+      },
+      "position": [
+        1100.0,
+        1600.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_008",
+      "overrides": {
+
+      },
+      "position": [
+        2100.0,
+        200.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_009",
+      "overrides": {
+
+      },
+      "position": [
+        2400.0,
+        200.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_010",
+      "overrides": {
+
+      },
+      "position": [
+        2700.0,
+        200.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_001",
+      "overrides": {
+
+      },
+      "position": [
+        1900.0,
+        1050.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_002",
+      "overrides": {
+
+      },
+      "position": [
+        1960.0,
+        1080.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_003",
+      "overrides": {
+
+      },
+      "position": [
+        2000.0,
+        900.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_004",
+      "overrides": {
+
+      },
+      "position": [
+        2600.0,
+        600.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_005",
+      "overrides": {
+
+      },
+      "position": [
+        2750.0,
+        700.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    }
+  ],
+  "size": [
+    3000.0,
+    2000.0
+  ],
+  "spawn_points": {
+    "default": [
+      960.0,
+      990.0
+    ],
+    "entrance_east": [
+      2920.0,
+      990.0
+    ],
+    "entrance_north": [
+      960.0,
+      80.0
+    ],
+    "entrance_south": [
+      960.0,
+      1920.0
+    ],
+    "entrance_west": [
+      80.0,
+      990.0
+    ]
+  },
   "theme_tags": [
     "village",
     "lac",
     "pastoral",
     "aurore",
     "debut"
-  ],
-  "level_range": [
-    1,
-    5
-  ],
-  "description": "Valclair s'étire paisiblement sur les rives dorées du Lac d'Aube, ses maisons en bois reflétant les teintes ambrées d'un ciel qui ne connaît jamais la nuit. Les villageois vaquent à leurs occupations sous le regard silencieux de ruines architectes à demi-enfouies dans les roseaux, témoins muets d'un âge révolu.",
-  "size": [
-    3000,
-    2000
-  ],
-  "environment": {
-    "ground_type": "grass",
-    "ground_color": "#5A964A",
-    "decor_zones": [
-      {
-        "type": "water",
-        "shape": "circle",
-        "center": [
-          2400,
-          1400
-        ],
-        "radius": 420,
-        "description": "Le Lac d'Aube, étendue paisible aux reflets dorés"
-      },
-      {
-        "type": "sand",
-        "shape": "rect",
-        "position": [
-          1900,
-          1150
-        ],
-        "size": [
-          600,
-          120
-        ],
-        "description": "Plage de sable fin longeant la rive ouest du lac"
-      },
-      {
-        "type": "dirt_path",
-        "shape": "rect",
-        "position": [
-          0,
-          950
-        ],
-        "size": [
-          1950,
-          80
-        ],
-        "description": "Chemin principal est-ouest traversant le village"
-      },
-      {
-        "type": "dirt_path",
-        "shape": "rect",
-        "position": [
-          920,
-          0
-        ],
-        "size": [
-          80,
-          950
-        ],
-        "description": "Chemin nord menant à l'entrée nord du village"
-      },
-      {
-        "type": "dirt_path",
-        "shape": "rect",
-        "position": [
-          920,
-          1030
-        ],
-        "size": [
-          80,
-          970
-        ],
-        "description": "Chemin sud menant à la sortie sud"
-      },
-      {
-        "type": "dirt_path",
-        "shape": "rect",
-        "position": [
-          1950,
-          870
-        ],
-        "size": [
-          80,
-          160
-        ],
-        "description": "Chemin secondaire vers la rive du lac"
-      }
-    ]
-  },
-  "spawn_points": {
-    "default": [
-      960,
-      990
-    ],
-    "entrance_north": [
-      960,
-      80
-    ],
-    "entrance_south": [
-      960,
-      1920
-    ],
-    "entrance_west": [
-      80,
-      990
-    ],
-    "entrance_east": [
-      2920,
-      990
-    ]
-  },
-  "prefab_instances": [
-    {
-      "prefab_id": "inn",
-      "instance_id": "inn_001",
-      "position": [
-        700,
-        860
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "house_simple",
-      "instance_id": "house_001",
-      "position": [
-        300,
-        700
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "house_simple",
-      "instance_id": "house_002",
-      "position": [
-        480,
-        700
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "house_simple",
-      "instance_id": "house_003",
-      "position": [
-        300,
-        1100
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "house_simple",
-      "instance_id": "house_004",
-      "position": [
-        480,
-        1100
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "house_simple",
-      "instance_id": "house_005",
-      "position": [
-        1150,
-        700
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "house_simple",
-      "instance_id": "house_006",
-      "position": [
-        1330,
-        700
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "house_simple",
-      "instance_id": "house_007",
-      "position": [
-        1150,
-        1100
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "house_simple",
-      "instance_id": "house_008",
-      "position": [
-        1330,
-        1100
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "house_simple",
-      "instance_id": "house_009",
-      "position": [
-        1550,
-        700
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "house_simple",
-      "instance_id": "house_010",
-      "position": [
-        1550,
-        1100
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "forge_stone_medium_01",
-      "instance_id": "forge_001",
-      "position": [
-        1750,
-        820
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "shop_rune_wood_medium_01",
-      "instance_id": "shop_001",
-      "position": [
-        1750,
-        1020
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_cluster_5",
-      "instance_id": "cluster_001",
-      "position": [
-        150,
-        200
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_cluster_5",
-      "instance_id": "cluster_002",
-      "position": [
-        400,
-        200
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_cluster_5",
-      "instance_id": "cluster_003",
-      "position": [
-        650,
-        200
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_cluster_5",
-      "instance_id": "cluster_004",
-      "position": [
-        150,
-        1600
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_cluster_5",
-      "instance_id": "cluster_005",
-      "position": [
-        400,
-        1700
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_cluster_5",
-      "instance_id": "cluster_006",
-      "position": [
-        700,
-        1650
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_cluster_5",
-      "instance_id": "cluster_007",
-      "position": [
-        1100,
-        1600
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_cluster_5",
-      "instance_id": "cluster_008",
-      "position": [
-        2100,
-        200
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_cluster_5",
-      "instance_id": "cluster_009",
-      "position": [
-        2400,
-        200
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_cluster_5",
-      "instance_id": "cluster_010",
-      "position": [
-        2700,
-        200
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_oak",
-      "instance_id": "tree_001",
-      "position": [
-        1900,
-        1050
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_oak",
-      "instance_id": "tree_002",
-      "position": [
-        1960,
-        1080
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_oak",
-      "instance_id": "tree_003",
-      "position": [
-        2000,
-        900
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_oak",
-      "instance_id": "tree_004",
-      "position": [
-        2600,
-        600
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    },
-    {
-      "prefab_id": "tree_oak",
-      "instance_id": "tree_005",
-      "position": [
-        2750,
-        700
-      ],
-      "rotation": 0,
-      "scale": 1.0,
-      "overrides": {}
-    }
-  ],
-  "elements": [
-    {
-      "element_type": "wall",
-      "id": "wall_north",
-      "position": [
-        0,
-        0
-      ],
-      "size": [
-        3000,
-        50
-      ],
-      "wall_type": "stone",
-      "color": "#7A6A50"
-    },
-    {
-      "element_type": "wall",
-      "id": "wall_south",
-      "position": [
-        0,
-        1950
-      ],
-      "size": [
-        3000,
-        50
-      ],
-      "wall_type": "stone",
-      "color": "#7A6A50"
-    },
-    {
-      "element_type": "wall",
-      "id": "wall_west",
-      "position": [
-        0,
-        0
-      ],
-      "size": [
-        50,
-        2000
-      ],
-      "wall_type": "stone",
-      "color": "#7A6A50"
-    },
-    {
-      "element_type": "wall",
-      "id": "wall_east",
-      "position": [
-        2950,
-        0
-      ],
-      "size": [
-        50,
-        2000
-      ],
-      "wall_type": "stone",
-      "color": "#7A6A50"
-    },
-    {
-      "element_type": "poi",
-      "poi_type": "npc",
-      "id": "npc_001",
-      "position": [
-        870,
-        990
-      ],
-      "poi_name": "Aldric, Aubergiste de Valclair",
-      "interaction_text": "Parler",
-      "dialogues": [
-        "Bienvenue à Valclair, Marqué ! Votre arrivée était attendue... enfin, d'une certaine façon. Le lac murmure des choses étranges depuis quelques nuits.",
-        "On raconte que les Architectes ont creusé les fondations de ce village bien avant la Fracture. Les pierres sous nos pieds sont plus vieilles que notre mémoire.",
-        "Si vous cherchez du travail ou des réponses, essayez la vieille forge à l'est. Maelis y passe ses journées à scruter les runes sur ses outils hérités."
-      ],
-      "quest_id": "",
-      "npc_type": "innkeeper"
-    },
-    {
-      "element_type": "poi",
-      "poi_type": "npc",
-      "id": "npc_002",
-      "position": [
-        1810,
-        870
-      ],
-      "poi_name": "Maelis, Forgeronne des Runes",
-      "interaction_text": "Parler",
-      "dialogues": [
-        "Ces outils... regardez ces gravures. Ce ne sont pas de simples ornements. J'ai mis des années avant de comprendre qu'il s'agissait d'une langue. La langue des Architectes.",
-        "Depuis la Fracture, les métaux de cet étage ont changé. Ils résonnent différemment sous le marteau, comme s'ils gardaient encore une mémoire de ce qu'était le monde entier.",
-        "Vous portez une Marque, je le vois. Soyez prudent avec ce que vous éveillez dans les ruines près du lac. Certaines choses préfèrent rester endormies."
-      ],
-      "quest_id": "",
-      "npc_type": "blacksmith"
-    },
-    {
-      "element_type": "poi",
-      "poi_type": "npc",
-      "id": "npc_003",
-      "position": [
-        1810,
-        1070
-      ],
-      "poi_name": "Sylvaine, Marchande de Runes",
-      "interaction_text": "Parler",
-      "dialogues": [
-        "Les runes que je vends ne sont pas de simples décorations — elles captent l'énergie résiduelle des Architectes qui imprègne encore l'air de cet étage.",
-        "Un Marqué comme vous devrait s'équiper convenablement avant de monter plus haut dans la Tour. Ce que vous trouverez au-dessus est bien plus exigeant que nos paisibles plaines."
-      ],
-      "quest_id": "",
-      "npc_type": "merchant"
-    },
-    {
-      "element_type": "poi",
-      "poi_type": "npc",
-      "id": "npc_004",
-      "position": [
-        350,
-        990
-      ],
-      "poi_name": "Vieille Hortense",
-      "interaction_text": "Parler",
-      "dialogues": [
-        "Je vis ici depuis soixante ans et jamais le ciel n'a changé. Toujours cette lumière dorée. Au début ça rassure... puis ça devient troublant.",
-        "Ma grand-mère disait que l'aurore éternelle est un don des Architectes — qu'ils ont figé l'aube pour préserver quelque chose d'important dans la lumière du matin."
-      ],
-      "quest_id": "",
-      "npc_type": "villager"
-    },
-    {
-      "element_type": "poi",
-      "poi_type": "npc",
-      "id": "npc_005",
-      "position": [
-        1250,
-        990
-      ],
-      "poi_name": "Torven, Pêcheur du Lac",
-      "interaction_text": "Parler",
-      "dialogues": [
-        "Le Lac d'Aube n'a pas de fond mesurable. J'ai essayé avec cent mètres de corde... rien. Et parfois, la nuit qu'on n'a jamais, je jure voir des lumières bleues monter des profondeurs.",
-        "Les poissons ici ont des écailles qui brillent légèrement. Pas dangereux, juste... différent. Comme si le lac gardait un peu de magie architecte dans ses eaux."
-      ],
-      "quest_id": "",
-      "npc_type": "villager"
-    },
-    {
-      "element_type": "poi",
-      "poi_type": "lore_stone",
-      "id": "lore_001",
-      "position": [
-        2150,
-        1300
-      ],
-      "poi_name": "Stèle des Architectes",
-      "interaction_text": "Examiner",
-      "lore_text": "Les glyphes gravés dans cette pierre résistent à l'érosion du temps. On peut y lire, pour qui sait décoder la langue des Architectes : « Ici fut posée la première Pierre d'Ancrage du Niveau Inférieur. Que les eaux du Lac d'Aube gardent mémoire de ce qui fut construit, afin que ceux qui montent retrouvent ce qui fut perdu lors de la Fracture. » Une flèche stylisée pointe vers le ciel.",
-      "lore_category": "architects"
-    },
-    {
-      "element_type": "poi",
-      "poi_type": "lore_stone",
-      "id": "lore_002",
-      "position": [
-        2700,
-        1500
-      ],
-      "poi_name": "Ruines Immergées - Fragment Émergé",
-      "interaction_text": "Examiner",
-      "lore_text": "Ce bloc de pierre à demi-sorti des eaux du lac porte des inscriptions partiellement effacées par les siècles. Les fragments lisibles évoquent 'la séparation des plans', 'le sacrifice consenti' et 'la Tour comme dernier lien entre les éclats du monde'. Quelqu'un a récemment tracé une Marque à la craie sur la pierre — identique à celle que vous portez.",
-      "lore_category": "fracture"
-    },
-    {
-      "element_type": "poi",
-      "poi_type": "lore_stone",
-      "id": "lore_003",
-      "position": [
-        960,
-        350
-      ],
-      "poi_name": "Borne de Chemin Antique",
-      "interaction_text": "Examiner",
-      "lore_text": "Cette borne de pierre polie dépasse à peine du sol herbeux, mais sa base plonge profondément dans la terre. Elle indique une direction vers le nord avec un symbole complexe — une spirale montante entourée de sept points. Les villageois l'ont toujours appelée 'la borne qui montre le chemin', sans savoir qu'elle fut placée par les Architectes pour guider les Marqués vers la Tour.",
-      "lore_category": "architects"
-    }
   ]
 }

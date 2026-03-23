@@ -80,6 +80,9 @@ static func instantiate_prefab(prefab: PrefabData, position: Vector2) -> Diction
 			# Position au CENTRE du prefab (pas au coin)
 			var prefab_size = prefab.size
 			sprite.position = position + (prefab_size / 2)
+
+			# Stocker l'ID du prefab dans les métadonnées du sprite
+			sprite.set_meta("prefab_id", prefab.prefab_id)
 			
 			# Appliquer offset si présent
 			if prefab.visual_config.has("sprite_offset"):

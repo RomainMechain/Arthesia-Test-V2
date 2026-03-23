@@ -42,6 +42,7 @@ static func load_zone_from_json(filepath: String) -> ZoneData:
 		
 		# Stocker le sprite pour l'afficher plus tard
 		if result.has("sprite_node") and result.sprite_node != null:
+			result.sprite_node.set_meta("instance_id", prefab_instance.instance_id)
 			sprite_nodes.append(result.sprite_node)
 
 	# Stocker les sprites dans les métadonnées de la zone
