@@ -41,29 +41,29 @@ ZONES_OUTPUT_PATH = "../test/"  # Où sauvegarder les zones générées
 AVAILABLE_PREFABS = {
     "buildings": [
         {
-            "id": "house_simple",
-            "name": "Maison Simple",
-            "size": [120, 100],
-            "description": "Petite maison en bois avec une porte"
-        },
-        {
             "id": "forge_stone_medium_01",
             "name": "Petite Forge en Pierre",
             "size": [120, 100],
             "description": "Forge en pierre avec cheminée"
         },
         {
-            "id": "inn",
-            "name": "Auberge",
-            "size": [180, 140],
-            "description": "Grande auberge en bois avec enseigne"
-        },
-        {
             "id": "shop_rune_wood_medium_01",
             "name": "Boutique de Runes en Bois",
             "size": [120, 100],
             "description": "Boutique en bois spécialisée dans les runes magiques"
-        }
+        },
+        {
+            "id": "guild_hall_wood_stone_large_01",
+            "name": "Guilde des Aventuriers",
+            "size": [280, 220],
+            "description": "Salle de réunion pour les membres de la guilde"
+        },
+        {
+            "id": "house_wood_medium_01",
+            "name": "Maison de Villageois en Bois",
+            "size": [130, 110],
+            "description": "Maison en bois typique d'un village"
+        },
     ],
     "vegetation": [
         {

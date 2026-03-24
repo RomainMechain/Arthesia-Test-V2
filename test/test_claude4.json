@@ -70,8 +70,8 @@
       "poi_name": "Aldric, Aubergiste de Valclair",
       "poi_type": "npc",
       "position": [
-        870.0,
-        990.0
+        899.937377929688,
+        925.135559082031
       ],
       "quest_id": ""
     },
@@ -88,8 +88,8 @@
       "poi_name": "Maelis, Forgeronne des Runes",
       "poi_type": "npc",
       "position": [
-        1905.5517578125,
-        900.030578613281
+        1920.42126464844,
+        914.899963378906
       ],
       "quest_id": ""
     },
@@ -153,8 +153,8 @@
       "poi_name": "Stèle des Architectes",
       "poi_type": "lore_stone",
       "position": [
-        2150.0,
-        1300.0
+        2199.12182617188,
+        1303.50866699219
       ]
     },
     {
@@ -422,8 +422,8 @@
 
       },
       "position": [
-        1993.44189453125,
-        804.619018554688
+        1936.67504882813,
+        768.690185546875
       ],
       "prefab_id": "forge_stone_medium_01",
       "rotation": 0.0,
@@ -435,8 +435,8 @@
 
       },
       "position": [
-        1810.0,
-        1202.40747070313
+        1755.39892578125,
+        1075.46008300781
       ],
       "prefab_id": "shop_rune_wood_medium_01",
       "rotation": 0.0,

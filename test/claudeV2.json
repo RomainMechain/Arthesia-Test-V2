@@ -1,0 +1,923 @@
+{
+  "description": "Valclair est un village paisible niché au bord d'un lac aux reflets dorés, dont les eaux semblent capturer l'aurore éternelle des Plaines d'Aube. Au cœur de ses ruelles fleuries se dresse une place centrale où une stèle de pierre noircie rappelle en silence l'horreur d'un temps oublié. Les habitants y vivent une vie simple, mais l'ombre d'un vieux récit pèse encore sur les pierres de leurs maisons reconstruites.",
+  "elements": [
+    {
+      "color": "#7A6A50",
+      "element_type": "wall",
+      "id": "wall_north",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "size": [
+        3000.0,
+        50.0
+      ],
+      "wall_type": "stone"
+    },
+    {
+      "color": "#7A6A50",
+      "element_type": "wall",
+      "id": "wall_south",
+      "position": [
+        0.0,
+        1950.0
+      ],
+      "size": [
+        3000.0,
+        50.0
+      ],
+      "wall_type": "stone"
+    },
+    {
+      "color": "#7A6A50",
+      "element_type": "wall",
+      "id": "wall_west",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "size": [
+        50.0,
+        2000.0
+      ],
+      "wall_type": "stone"
+    },
+    {
+      "color": "#7A6A50",
+      "element_type": "wall",
+      "id": "wall_east",
+      "position": [
+        2950.0,
+        0.0
+      ],
+      "size": [
+        50.0,
+        2000.0
+      ],
+      "wall_type": "stone"
+    },
+    {
+      "element_type": "poi",
+      "id": "lore_001",
+      "interaction_text": "Examiner",
+      "lore_category": "architects",
+      "lore_text": "Ici s'élevait autrefois le cœur battant de Valclair. En l'an de la Fracture, une ombre venue du néant — que les anciens nommèrent Volgrath, l'Effaceur — surgit des crevasses ouvertes dans le ciel et réduisit le village en cendres et en silence. Les Architectes, en leur sagesse ultime, auraient tissé un sceau pour contenir la bête. Ce sceau tint. Volgrath fut repoussé dans les profondeurs de la Tour. Mais les Architectes ne revinrent jamais. Valclair fut rebâti pierre par pierre, et cette stèle gravée dans leur mémoire rappelle à chaque habitant : certaines nuits, sous les étoiles figées, on entend encore gronder quelque chose en dessous.",
+      "poi_name": "La Stèle de Valclair",
+      "poi_type": "lore_stone",
+      "position": [
+        1140.0,
+        960.0
+      ]
+    },
+    {
+      "dialogues": [
+        "Cette stèle... mon arrière-grand-mère y a gravé son propre nom le jour où le village a été rebâti. Un serment de mémoire, disait-elle.",
+        "Volgrath. On n'aime pas prononcer ce nom à voix haute ici. Les vieilles pierres entendent, paraît-il.",
+        "Tu portes une Marque, étranger ? Alors fais attention en montant. Ce qui a failli dévorer Valclair n'était qu'un fragment de ce qui sommeille plus haut dans la Tour.",
+        "Les Architectes nous ont protégés une fois. Mais personne ne sait ce qu'il adviendrait si les sceaux venaient à faiblir."
+      ],
+      "element_type": "poi",
+      "id": "npc_001",
+      "interaction_text": "Parler",
+      "npc_type": "villager",
+      "poi_name": "Mireille la Gardienne",
+      "poi_type": "npc",
+      "position": [
+        1142.90478515625,
+        897.9609375
+      ],
+      "quest_id": ""
+    },
+    {
+      "dialogues": [
+        "Bienvenue, voyageur ! Ma forge tourne nuit et jour depuis que les Marqués commencent à affluer dans le village.",
+        "Tu cherches des armes solides ? J'ai justement reçu du métal des Plaines d'Aube, infusé de lumière d'aurore. Rare, ça.",
+        "Mon grand-père était là lors de la reconstruction. Il disait que certaines pierres du sol portent encore les griffures de Volgrath. Je n'y croyais pas... jusqu'à ce que j'en voie une, sous ma forge.",
+        "Monte vers le haut de la Tour si tu le dois. Mais reviens me voir d'abord. Je peux rendre tes lames plus tranchantes que des regrets."
+      ],
+      "element_type": "poi",
+      "id": "npc_002",
+      "interaction_text": "Parler",
+      "npc_type": "merchant",
+      "poi_name": "Torven le Forgeron",
+      "poi_type": "npc",
+      "position": [
+        856.916381835938,
+        899.321594238281
+      ],
+      "quest_id": ""
+    },
+    {
+      "dialogues": [
+        "Ce parc... je l'ai planté de mes propres mains il y a vingt ans. Chaque arbre est dédié à un habitant tombé lors de la destruction ancienne.",
+        "Les fleurs qui poussent ici ne ressemblent à aucune autre espèce des Plaines d'Aube. Comme si la terre elle-même portait le souvenir de ce qui a brûlé.",
+        "Tu vois ce chêne au centre ? Il a poussé en une seule nuit, sans que personne ne le plante. Les anciens disent que c'est un cadeau des Architectes. Moi, j'y crois.",
+        "Prends soin de toi, Marqué. La Tour est grande, et ses étages n'ont pas tous la grâce tranquille de Valclair."
+      ],
+      "element_type": "poi",
+      "id": "npc_003",
+      "interaction_text": "Parler",
+      "npc_type": "villager",
+      "poi_name": "Elwen la Botaniste",
+      "poi_type": "npc",
+      "position": [
+        1943.33325195313,
+        243.333343505859
+      ],
+      "quest_id": ""
+    },
+    {
+      "dialogues": [
+        "Ce lac... les anciens l'appellent le Miroir Brisé. Avant la Fracture, ils disent qu'il reflétait un autre ciel. Un ciel d'avant.",
+        "Parfois quand je pêche à l'aube, je vois quelque chose scintiller sous la surface. Pas un poisson. Quelque chose de plus vieux.",
+        "On dit qu'un artefact des Architectes est tombé dans le lac lors de la destruction de Valclair. Personne n'a jamais plongé assez profond pour le trouver.",
+        "L'eau est froide mais paisible. Profite-en, Marqué. Plus haut, je doute que tu trouves autant de sérénité."
+      ],
+      "element_type": "poi",
+      "id": "npc_004",
+      "interaction_text": "Parler",
+      "npc_type": "villager",
+      "poi_name": "Pêcheur Aldric",
+      "poi_type": "npc",
+      "position": [
+        2580.0,
+        1300.0
+      ],
+      "quest_id": ""
+    },
+    {
+      "element_type": "poi",
+      "id": "lore_002",
+      "interaction_text": "Examiner",
+      "lore_category": "architects",
+      "lore_text": "Fragment de borne architecturale, partiellement immergée dans la berge. Les glyphes encore lisibles se traduisent ainsi : 'Que ce lac serve de mémoire. L'eau retient ce que la pierre oublie. Nous avons scellé la bête non avec la force, mais avec le souvenir de ce qu'elle a voulu détruire. Tant que Valclair se souvient, le sceau tient.' — Inscription des Architectes, période post-Fracture.",
+      "poi_name": "Borne des Architectes",
+      "poi_type": "lore_stone",
+      "position": [
+        2590.0,
+        1200.0
+      ]
+    }
+  ],
+  "environment": {
+    "decor_zones": [
+      {
+        "description": "Rue principale nord-sud traversant le village",
+        "position": [
+          440.0,
+          0.0
+        ],
+        "shape": "rect",
+        "size": [
+          80.0,
+          2000.0
+        ],
+        "type": "dirt_path"
+      },
+      {
+        "description": "Rue principale est-ouest traversant le village",
+        "position": [
+          0.0,
+          940.0
+        ],
+        "shape": "rect",
+        "size": [
+          3000.0,
+          80.0
+        ],
+        "type": "dirt_path"
+      },
+      {
+        "description": "Ruelle secondaire menant à la place centrale",
+        "position": [
+          1100.0,
+          700.0
+        ],
+        "shape": "rect",
+        "size": [
+          80.0,
+          600.0
+        ],
+        "type": "dirt_path"
+      },
+      {
+        "center": [
+          2600.0,
+          1600.0
+        ],
+        "description": "Le lac du village aux reflets dorés",
+        "radius": 280.0,
+        "shape": "circle",
+        "type": "water"
+      },
+      {
+        "center": [
+          2600.0,
+          1600.0
+        ],
+        "description": "Berge sablonneuse autour du lac",
+        "radius": 340.0,
+        "shape": "circle",
+        "type": "sand"
+      },
+      {
+        "description": "Parc verdoyant au nord-est du village",
+        "position": [
+          1600.0,
+          50.0
+        ],
+        "shape": "rect",
+        "size": [
+          600.0,
+          500.0
+        ],
+        "type": "dark_grass"
+      }
+    ],
+    "ground_color": "#5A964A",
+    "ground_type": "grass"
+  },
+  "floor_id": 1.0,
+  "id": "floor1_zone_001",
+  "level_range": [
+    1.0,
+    5.0
+  ],
+  "name": "Valclair, le Village du Lac Brisé",
+  "prefab_instances": [
+    {
+      "instance_id": "house_001",
+      "overrides": {
+
+      },
+      "position": [
+        187.662811279297,
+        79.9106140136719
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_002",
+      "overrides": {
+
+      },
+      "position": [
+        282.630828857422,
+        680.051025390625
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_003",
+      "overrides": {
+
+      },
+      "position": [
+        76.2579956054688,
+        370.689636230469
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_004",
+      "overrides": {
+
+      },
+      "position": [
+        2564.45703125,
+        246.628479003906
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_005",
+      "overrides": {
+
+      },
+      "position": [
+        2573.86596679688,
+        799.915771484375
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_006",
+      "overrides": {
+
+      },
+      "position": [
+        553.077880859375,
+        484.635986328125
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_007",
+      "overrides": {
+
+      },
+      "position": [
+        68.1586303710938,
+        1114.85925292969
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_008",
+      "overrides": {
+
+      },
+      "position": [
+        176.419250488281,
+        1276.98205566406
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_009",
+      "overrides": {
+
+      },
+      "position": [
+        167.92822265625,
+        1670.4853515625
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_010",
+      "overrides": {
+
+      },
+      "position": [
+        286.982055664063,
+        1042.685546875
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_011",
+      "overrides": {
+
+      },
+      "position": [
+        284.859313964844,
+        1455.29357910156
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_012",
+      "overrides": {
+
+      },
+      "position": [
+        574.431701660156,
+        89.0421447753906
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_013",
+      "overrides": {
+
+      },
+      "position": [
+        703.294982910156,
+        286.283569335938
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_014",
+      "overrides": {
+
+      },
+      "position": [
+        553.100463867188,
+        1038.82666015625
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_015",
+      "overrides": {
+
+      },
+      "position": [
+        790.195678710938,
+        1036.78759765625
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_016",
+      "overrides": {
+
+      },
+      "position": [
+        648.938720703125,
+        1204.94396972656
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_017",
+      "overrides": {
+
+      },
+      "position": [
+        570.237060546875,
+        1683.78747558594
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_018",
+      "overrides": {
+
+      },
+      "position": [
+        792.234619140625,
+        1334.35729980469
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_019",
+      "overrides": {
+
+      },
+      "position": [
+        1926.66662597656,
+        766.666625976563
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "house_020",
+      "overrides": {
+
+      },
+      "position": [
+        2203.33349609375,
+        1033.33325195313
+      ],
+      "prefab_id": "house_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "forge_001",
+      "overrides": {
+
+      },
+      "position": [
+        900.0,
+        803.333251953125
+      ],
+      "prefab_id": "forge_stone_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "shop_001",
+      "overrides": {
+
+      },
+      "position": [
+        1086.25793457031,
+        559.30126953125
+      ],
+      "prefab_id": "shop_rune_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "shop_002",
+      "overrides": {
+
+      },
+      "position": [
+        1225.86682128906,
+        1044.60998535156
+      ],
+      "prefab_id": "shop_rune_wood_medium_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "guild_001",
+      "overrides": {
+
+      },
+      "position": [
+        1260.67236328125,
+        670.94921875
+      ],
+      "prefab_id": "guild_hall_wood_stone_large_01",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_001",
+      "overrides": {
+
+      },
+      "position": [
+        1650.0,
+        80.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_002",
+      "overrides": {
+
+      },
+      "position": [
+        1720.0,
+        130.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_003",
+      "overrides": {
+
+      },
+      "position": [
+        1800.0,
+        80.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_004",
+      "overrides": {
+
+      },
+      "position": [
+        1870.0,
+        150.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_005",
+      "overrides": {
+
+      },
+      "position": [
+        1950.0,
+        90.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_006",
+      "overrides": {
+
+      },
+      "position": [
+        2020.0,
+        140.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_007",
+      "overrides": {
+
+      },
+      "position": [
+        2100.0,
+        80.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_008",
+      "overrides": {
+
+      },
+      "position": [
+        1660.0,
+        240.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_009",
+      "overrides": {
+
+      },
+      "position": [
+        1750.0,
+        310.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_010",
+      "overrides": {
+
+      },
+      "position": [
+        1850.0,
+        270.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_011",
+      "overrides": {
+
+      },
+      "position": [
+        1950.0,
+        300.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_012",
+      "overrides": {
+
+      },
+      "position": [
+        2060.0,
+        250.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_013",
+      "overrides": {
+
+      },
+      "position": [
+        2140.0,
+        340.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_001",
+      "overrides": {
+
+      },
+      "position": [
+        1680.0,
+        380.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_002",
+      "overrides": {
+
+      },
+      "position": [
+        1950.0,
+        390.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_014",
+      "overrides": {
+
+      },
+      "position": [
+        2400.0,
+        1350.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_015",
+      "overrides": {
+
+      },
+      "position": [
+        2350.0,
+        1500.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_016",
+      "overrides": {
+
+      },
+      "position": [
+        2820.0,
+        1400.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_017",
+      "overrides": {
+
+      },
+      "position": [
+        2860.0,
+        1550.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_003",
+      "overrides": {
+
+      },
+      "position": [
+        2700.0,
+        1850.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_018",
+      "overrides": {
+
+      },
+      "position": [
+        100.0,
+        750.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_019",
+      "overrides": {
+
+      },
+      "position": [
+        200.0,
+        800.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "tree_020",
+      "overrides": {
+
+      },
+      "position": [
+        150.0,
+        850.0
+      ],
+      "prefab_id": "tree_oak",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_004",
+      "overrides": {
+
+      },
+      "position": [
+        2200.0,
+        1500.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    },
+    {
+      "instance_id": "cluster_005",
+      "overrides": {
+
+      },
+      "position": [
+        1300.0,
+        1400.0
+      ],
+      "prefab_id": "tree_cluster_5",
+      "rotation": 0.0,
+      "scale": 1.0
+    }
+  ],
+  "size": [
+    3000.0,
+    2000.0
+  ],
+  "spawn_points": {
+    "default": [
+      1500.0,
+      1000.0
+    ],
+    "entrance_east": [
+      2940.0,
+      980.0
+    ],
+    "entrance_north": [
+      480.0,
+      60.0
+    ],
+    "entrance_south": [
+      480.0,
+      1940.0
+    ],
+    "entrance_west": [
+      60.0,
+      980.0
+    ]
+  },
+  "theme_tags": [
+    "village",
+    "lac",
+    "commerce",
+    "habitation",
+    "parc",
+    "verdure",
+    "lore",
+    "ruines"
+  ]
+}

@@ -500,11 +500,11 @@ func _on_save_pressed():
 	"""Sauvegarde les modifications dans le JSON"""
 	
 	print("\n💾 SAUVEGARDE DE LA ZONE")
-	print("==============================")
+	print("====================")
 	
 	if not has_modifications or modified_elements.size() == 0:
 		print("ℹ️  Aucune modification à sauvegarder")
-		print("==============================")
+		print("====================")
 		return
 	
 	print("📝 Éléments modifiés : %d" % modified_elements.size())
@@ -550,12 +550,23 @@ func _on_save_pressed():
 				var prefab_inst: PrefabInstance = element_node.get_meta("prefab_instance")
 				var instance_id = prefab_inst.instance_id
 				
+				# Calculer la position du coin supérieur gauche
+				var sprite_center_pos = element_node.position
+				var prefab_data = PrefabLoader.load_prefab(prefab_inst.prefab_id)
+				
+				var corner_pos = sprite_center_pos
+				if prefab_data and element_node is Sprite2D:
+					var sprite: Sprite2D = element_node
+					if sprite.centered:
+						# Le sprite est centré, soustraire la moitié de la taille
+						corner_pos = sprite_center_pos - (prefab_data.size / 2)
+				
 				# Trouver le prefab dans le JSON
 				for i in range(zone_data["prefab_instances"].size()):
 					var inst = zone_data["prefab_instances"][i]
 					if inst.get("instance_id") == instance_id:
-						inst["position"] = [element_node.position.x, element_node.position.y]
-						print("  ✅ Prefab mis à jour : %s → (%.0f, %.0f)" % [prefab_inst.prefab_id, element_node.position.x, element_node.position.y])
+						inst["position"] = [corner_pos.x, corner_pos.y]
+						print("  ✅ Prefab mis à jour : %s → (%.0f, %.0f)" % [prefab_inst.prefab_id, corner_pos.x, corner_pos.y])
 						break
 	
 	# Sauvegarder
@@ -566,13 +577,13 @@ func _on_save_pressed():
 		file_write.close()
 		
 		print("\n💾 ✅ Zone sauvegardée : %s" % zone_file_path)
-		print("==============================")
+		print("====================")
 		
 		has_modifications = false
-		modified_elements.clear()  # Vider la liste
+		modified_elements.clear()
 	else:
 		push_error("❌ Impossible d'ouvrir le fichier pour écriture : %s" % zone_file_path)
-		print("==============================")
+		print("====================")
 
 func _on_cancel_pressed():
 	"""Annule et recharge la zone"""

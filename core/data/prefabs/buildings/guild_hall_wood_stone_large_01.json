@@ -1,0 +1,166 @@
+{
+  "prefab_id": "guild_hall_wood_stone_large_01",
+  "prefab_type": "building",
+  "name": "Guilde des Aventuriers",
+  "size": [
+    280,
+    220
+  ],
+  "anchor_point": [
+    0,
+    0
+  ],
+  "visual_config": {
+    "render_type": "sprite",
+    "sprite_path": "res://assets/buildings/guild_hall_wood_stone_large_01.png",
+    "sprite_offset": [0, 0],
+    "z_index": 10
+  },
+  "elements": [
+    {
+      "element_type": "wall",
+      "id": "floor_stone",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        280,
+        220
+      ],
+      "wall_type": "floor",
+      "color": "#777777"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_back_stone",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        280,
+        15
+      ],
+      "wall_type": "stone",
+      "color": "#A9A9A9"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_left_stone",
+      "position": [
+        0,
+        15
+      ],
+      "size": [
+        15,
+        190
+      ],
+      "wall_type": "stone",
+      "color": "#A9A9A9"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_right_stone",
+      "position": [
+        265,
+        15
+      ],
+      "size": [
+        15,
+        190
+      ],
+      "wall_type": "stone",
+      "color": "#A9A9A9"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_front_wood_left",
+      "position": [
+        15,
+        205
+      ],
+      "size": [
+        105,
+        15
+      ],
+      "wall_type": "wood",
+      "color": "#8B4513"
+    },
+    {
+      "element_type": "wall",
+      "id": "wall_front_wood_right",
+      "position": [
+        160,
+        205
+      ],
+      "size": [
+        105,
+        15
+      ],
+      "wall_type": "wood",
+      "color": "#8B4513"
+    },
+    {
+      "element_type": "exit",
+      "id": "door_main_entrance",
+      "position": [
+        120,
+        205
+      ],
+      "size": [
+        40,
+        15
+      ],
+      "target_zone_id": "guild_interior",
+      "target_spawn_name": "entrance",
+      "exit_type": "door",
+      "color": "#654321",
+      "locked": false,
+      "required_key_id": "",
+      "min_level": 0
+    },
+    {
+      "element_type": "wall",
+      "id": "roof_wood",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        280,
+        220
+      ],
+      "wall_type": "wood_roof",
+      "color": "#654321"
+    },
+    {
+      "element_type": "wall",
+      "id": "chimney_stone",
+      "position": [
+        20,
+        20
+      ],
+      "size": [
+        30,
+        30
+      ],
+      "wall_type": "stone",
+      "color": "#A9A9A9"
+    },
+    {
+      "element_type": "wall",
+      "id": "guild_sign_wood",
+      "position": [
+        130,
+        180
+      ],
+      "size": [
+        60,
+        15
+      ],
+      "wall_type": "wood_decoration",
+      "color": "#D2B48C"
+    }
+  ]
+}
